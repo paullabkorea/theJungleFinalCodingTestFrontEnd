@@ -1,0 +1,29 @@
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+.movie {
+    display: flex;
+}
+
+.poster-container {
+    width: 250px;
+}
+
+.contents {
+    width: 500px;
+    color: #fff;
+    background-color: #000;
+}
+
+.star-background {
+    width: 150px;
+    height: 30px;
+    background: left / contain url(/src/assets/images/icon_empty_star.png)
+}
+
+.star-point {
+    height: 100%;
+    background: left / contain url(/src/assets/images/icon_star.png)
+}
