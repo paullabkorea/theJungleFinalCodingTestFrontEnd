@@ -3,23 +3,86 @@
     justify-content: center;
 }
 
+img {
+    width: 100%;
+}
+
 .movie {
     display: flex;
+    align-items: center;
+    position: relative;
 }
 
 .poster-container {
-    width: 250px;
+    position: absolute;
+    left: -64px;
+    width: 281px;
+    height: 396px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-.contents {
-    width: 500px;
+.content {
+    width: 608px;
+    height: 500px;
+    box-sizing: border-box;
     color: #fff;
-    background-color: #000;
+    background-color: #333;
+    border-radius: 15px;
+    padding: 64px 45px 68px 266px;
+}
+
+.content-type span {
+    color: #BDBDBD;
+}
+.content-type span + span::before {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 13px;
+    margin: 0px 7px -1px 3px;
+    background-color: #BDBDBD;
+}
+
+.content-title {
+    margin: 13px 0 114px 0;
+    font-size: 32px;
+}
+
+.content-favorite {
+    display: flex;
+    margin-bottom: 22px;
+}
+
+.content-favorite button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    margin-right: 20px;
+}
+
+.button-recommend img {
+    width: 23.8px;
+    margin-top: -1px;
+}
+
+.button-heart img {
+    width: 22.6px;
+    margin-top: 3px;
+}
+
+.star-average {
+    display: block;
+    margin-bottom: 16px;
 }
 
 .star-background {
-    width: 150px;
-    height: 30px;
+    width: 250px;
+    height: 50px;
     background: left / contain url(/src/assets/images/icon_empty_star.png)
 }
 
