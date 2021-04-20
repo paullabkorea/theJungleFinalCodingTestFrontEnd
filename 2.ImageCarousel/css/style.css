@@ -1,0 +1,145 @@
+@import 'reset.css';
+
+@font-face {
+    font-family: "NEXON Lv1 Gothic OTF";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
+      format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf") format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2") format('woff2'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff") format('woff'),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf") format('opentype');
+}
+
+body {
+    font-family: 'Noto Sans KR';
+    font-weight: 400;
+}
+
+#image-upload {
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.image-upload__wrap {
+    width: 1500px;
+}
+
+input[id="image-upload__input"] + label {
+    padding: 15px 30px;
+    background-color: #2F80ED;
+    border-radius: 10px;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[id="image-upload__input"] {
+    display: none;
+}
+
+#carousel {
+    display: flex;
+    justify-content: center;
+}
+
+.carousel__wrap {
+    width: 1500px;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.carousel__list {
+    width: 250px;
+    height: 250px;
+    position: relative;
+}
+
+.carousel__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    -webkit-box-reflect: below 20px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.25)));
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    transition: all .5s;
+}
+
+.carousel__item > img {
+    width: 100%;
+    height: auto;
+}
+
+.now {
+    transform: rotateY(0deg) translateZ(250px);
+}
+
+.no-shadow {
+    display: none;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    width: 140px;
+    height: 62px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #FFF;
+    border: 3px solid #828282;
+    border-radius: 36px;
+    color: #828282;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 300px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: #828282;
+    color: #FFF;
+}
+
+.prev-btn {
+    left: 0;
+}
+
+.next-btn {
+    right: 0;
+}
