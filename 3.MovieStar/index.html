@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/style/reset.css">
     <link rel="stylesheet" href="src/style/app.css">
     <title>영화 별점 평가하기</title>
@@ -22,16 +24,21 @@
                 <h3 class="content-title">파이썬 부트캠프</h3>
                 <div class="content-favorite">
                     <button class="button-recommend">
-                        <img src="./src/assets/images/icon_thumbs_up.png" alt="추천"/>
+                        <img src="./src/assets/images/icon_thumbs_up.png" alt="추천" />
                     </button>
                     <button class="button-heart">
-                        <img src="./src/assets/images/icon_heart.png" alt="하트"/>
+                        <img src="./src/assets/images/icon_heart.png" alt="하트" />
                     </button>
                 </div>
                 <div class="content-star">
                     <em class="star-average">별점 평균 4.5</em>
-                    <div class="star-background">
-                        <div class="star-point" style="width:50%"></div>
+                    <div class="star-point-container">
+                        <div class="star-background">
+                            <div class="star-point" style="width:50%"></div>
+                        </div>
+                        <button class="icon-remove-star">
+                            <img src="./src/assets/svg/icon_remove_star.svg" alt="별점 제거" />
+                        </button>
                     </div>
                 </div>
             </div>
