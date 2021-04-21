@@ -57,6 +57,7 @@
 /* 컨텐츠 스타일 */
 .cont-movie .list-movieInfo{
     overflow:hidden;
+    padding: 0 12px 24px 12px;
     border: 2px solid #BDBDBD;
     border-radius: 15px;
     background:#fff
@@ -82,13 +83,22 @@
     background:#F2F2F2;
     border-top:1px solid #BDBDBD;
 }
-.cont-movie .list-movieInfo li > a[class^="link"]:last-child::before{
+.cont-movie .list-movieInfo li .link-reserv::after{
+    display: inline-block;
+    float:right;
+    content:'';
+    width:1px;
+    height:100%;
+    background:#BDBDBD;
+}
+.cont-movie .list-movieInfo li .link-teaser::before{
     display: inline-block;
     content:'';
-    height:100%;
-    float:left;
-    width:1px;
-    background:#BDBDBD;
+    width:16px;
+    height:16px;
+    background:url("../images/btn_play.png");
+    vertical-align: top;
+    margin: 11px 2px 0 0;
 }
 .cont-movie .list-movieInfo .link-movie{
     display:block;
