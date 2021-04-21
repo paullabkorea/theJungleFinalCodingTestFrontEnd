@@ -1,0 +1,132 @@
+/* 유틸리티 */
+/* 스크린리더 전용 */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+/* 컨테이너 스타일 */
+.cont-movie{
+    width:1006px;
+    margin:86px auto 0;
+    padding:0 27px 29px;
+    border: 2px solid #BDBDBD;
+    border-radius: 15px;
+    background:#E5E5E5;
+}
+.cont-movie .tit-cont{
+    font-size:24px;
+    text-align: center;
+    line-height:28px;
+    padding:38px 0;
+}
+
+/* nav 스타일 */
+.cont-movie .nav-movie{
+    text-align: center;
+}
+.cont-movie .nav-movie::before{
+    display:block;
+    content:'';
+    width:650px;
+    height:2px;
+    background: #BDBDBD;
+    margin:0 auto;
+}
+.cont-movie .list-movieNav{
+    display:inline-block;
+    margin:27px 0;
+}
+.cont-movie .list-movieNav li{
+    float:left;
+}
+.cont-movie .list-movieNav li+li{
+    margin-left:60px;
+}
+.cont-movie .list-movieNav .link-nav{
+    color:#828282;
+}
+.cont-movie .list-movieNav .on .link-nav{
+    color:#000;
+    font-weight:bolc;
+}
+
+/* 컨텐츠 스타일 */
+.cont-movie .list-movieInfo{
+    overflow:hidden;
+    border: 2px solid #BDBDBD;
+    border-radius: 15px;
+    background:#fff
+}
+.cont-movie .list-movieInfo .tit-movie{
+    font-weight: bold;
+    line-height:23px;
+}
+.cont-movie .list-movieInfo li{
+    overflow:hidden;
+    float:left;
+    border:1px solid #BDBDBD;
+    border-radius:10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin:24px 12px 0;
+}
+.cont-movie .list-movieInfo li > a[class^="link"]{
+    display:inline-block;
+    width:50%;
+    text-align:center;
+    height:41px;
+    line-height:41px;
+    background:#F2F2F2;
+    border-top:1px solid #BDBDBD;
+}
+.cont-movie .list-movieInfo li > a[class^="link"]:last-child::before{
+    display: inline-block;
+    content:'';
+    height:100%;
+    float:left;
+    width:1px;
+    background:#BDBDBD;
+}
+.cont-movie .list-movieInfo .link-movie{
+    display:block;
+    margin-bottom:11px;
+}
+.list-movieInfo .list-info{
+    margin-top:12px;
+}
+.list-movieInfo article{
+    width:180px;
+    padding:19px 19px 18px 19px;
+}
+.list-movieInfo .list-info dt, .list-movieInfo .list-info dd{
+    display:inline;
+    font-size:13px;
+}
+.list-movieInfo .list-info dt{
+    font-weight:lighter;
+    color:#828282;
+}
+.list-movieInfo .list-info .item-star{
+    float:right;
+}
+.list-movieInfo .list-info .item-star dt::after{
+    display:inline-block;
+    content:'';
+    width:14px;
+    height:13px;
+    margin-left: 5px;
+    background:url("../images/star.png");
+    vertical-align: top;
+}
+
+.list-movieInfo .list-info div{
+    display:inline-block;
+    margin-bottom:5px;
+}
+
+.cont-company{
+
+}
