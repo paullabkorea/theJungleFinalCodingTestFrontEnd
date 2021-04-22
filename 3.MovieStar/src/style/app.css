@@ -71,19 +71,26 @@ img {
     margin-right: 20px;
 }
 
-.content-favorite button.on {
-    border-color: yellow;
-    box-shadow: 0px ​0px 8px -2px yellow;
-}
-
-.button-recommend img {
+.button-recommend .icon-thumbs-up {
     width: 23.8px;
+    height: 23.8px;
     margin-top: -1px;
+    background: center / contain url(/src/assets/images/icon_thumbs_up.png) no-repeat;
 }
 
-.button-heart img {
+.button-recommend.on .icon-thumbs-up {
+    background-image: url(/src/assets/images/icon_thumbs_up_fill.png);
+}
+
+.button-heart .icon-heart {
     width: 22.6px;
+    height: 22.6px;
     margin-top: 3px;
+    background: center / contain url(/src/assets/images/icon_heart_2.png) no-repeat;
+}
+
+.button-heart.on .icon-heart {
+    background-image: url(/src/assets/images/icon_heart_fill.png);
 }
 
 .star-average {
