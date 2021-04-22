@@ -23,9 +23,6 @@
   -webkit-box-orient: vertical;
 }
 /* 스킵 네비게이션 */
-.nav-skip {
-    position: relative;
-}
 .nav-skip a {
     position: absolute; 
     top: -200px; 
@@ -84,7 +81,7 @@
 }
 .cont-movie .list-movieNav .on .link-nav{
     color:#000;
-    font-weight:bolc;
+    font-weight:bold;
 }
 
 
