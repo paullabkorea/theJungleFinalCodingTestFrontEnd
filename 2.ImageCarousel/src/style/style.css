@@ -92,7 +92,7 @@ input[id="image-upload__input"] {
     left: 0;
     width: 250px;
     height: 250px;
-    -webkit-box-reflect: below 20px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.25)));
+    -webkit-box-reflect: below 20px linear-gradient(transparent 45%, rgba(255, 255, 255, 0.25));
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
