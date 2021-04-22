@@ -1,6 +1,6 @@
 const starImageSourceMap = {
     empty: './src/assets/images/icon_empty_star.png',
-    harf: './src/assets/images/icon_harf_star.png',
+    harf: './src/assets/images/icon_half_star.png',
     full: './src/assets/images/icon_star.png'
 };
 
