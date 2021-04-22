@@ -69,6 +69,7 @@ function uploadImg(value) {
 
 imageInput.addEventListener("change", e => {
     uploadImg(e.target);
+    e.target.value = "";
 });
 
 // Next, Prev 이동 버튼

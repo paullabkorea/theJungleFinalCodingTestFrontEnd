@@ -40,6 +40,15 @@ body {
     font-weight: 400;
 }
 
+.section-name {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
 #image-upload {
     position: fixed;
     top: 70px;
@@ -57,9 +66,12 @@ input[id="image-upload__input"] + label {
 }
 
 input[id="image-upload__input"] {
+    position: absolute;
+    left: -10000px;
+    top: auto;
     width: 1px;
     height: 1px;
-    outline: none;
+    overflow: hidden;
 }
 
 #carousel {
