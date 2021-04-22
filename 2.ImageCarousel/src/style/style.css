@@ -41,13 +41,9 @@ body {
 }
 
 #image-upload {
-    display: flex;
-    justify-content: center;
-    margin-top: 70px;
-}
-
-.image-upload__wrap {
-    width: 1500px;
+    position: fixed;
+    top: 70px;
+    left: 100px;
 }
 
 input[id="image-upload__input"] + label {
@@ -61,7 +57,9 @@ input[id="image-upload__input"] + label {
 }
 
 input[id="image-upload__input"] {
-    display: none;
+    width: 1px;
+    height: 1px;
+    outline: none;
 }
 
 #carousel {
