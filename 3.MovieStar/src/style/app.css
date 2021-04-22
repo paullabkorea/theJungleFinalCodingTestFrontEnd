@@ -71,6 +71,11 @@ img {
     margin-right: 20px;
 }
 
+.content-favorite button.on {
+    border-color: yellow;
+    box-shadow: 0px ​0px 8px -2px yellow;
+}
+
 .button-recommend img {
     width: 23.8px;
     margin-top: -1px;
@@ -92,14 +97,13 @@ img {
 }
 
 .star-background {
+    display: flex;
     width: 250px;
     height: 50px;
-    background: left / contain url(/src/assets/images/icon_empty_star.png)
 }
 
-.star-point {
-    height: 100%;
-    background: left / contain url(/src/assets/images/icon_star.png)
+.star-background img {
+    width: auto;
 }
 
 .icon-remove-star {

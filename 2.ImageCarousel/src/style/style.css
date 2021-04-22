@@ -105,10 +105,15 @@ input[id="image-upload__input"] {
 .carousel__item > img {
     width: 100%;
     height: auto;
+    filter: brightness(70%);
 }
 
 .now {
     transform: rotateY(0deg) translateZ(250px);
+}
+
+.now > img {
+    filter: brightness(100%);
 }
 
 .no-shadow {
