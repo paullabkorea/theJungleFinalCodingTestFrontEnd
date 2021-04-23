@@ -111,8 +111,8 @@
     display:inline-block;
     width:50%;
     text-align:center;
-    height:41px;
-    line-height:41px;
+    height: 26px;
+    padding-top: 15px;
     background:#F2F2F2;
     border-top:1px solid #BDBDBD;
 }
@@ -121,7 +121,8 @@
     float:right;
     content:'';
     width:1px;
-    height:100%;
+    height: 41px;
+    margin-top: -15px;
     background:#BDBDBD;
 }
 .cont-movie .list-movieInfo li .link-teaser::before{
@@ -131,7 +132,7 @@
     height:16px;
     background:url("../images/btn_play.png");
     vertical-align: top;
-    margin: 11px 2px 0 0;
+    margin: -2px 5px 0 0;
 }
 .cont-movie .list-movieInfo .link-movie{
     display:block;
@@ -156,7 +157,7 @@
 }
 .list-movieInfo .list-info .multi-ellipsis{
     width:140px;
-    height:28px;
+    height:29px;
     float: right;
     display: -webkit-box;
     margin-left: 5px;
