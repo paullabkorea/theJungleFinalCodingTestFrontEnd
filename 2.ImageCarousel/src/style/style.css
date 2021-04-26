@@ -137,6 +137,7 @@ input[id="image-upload__input"] {
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;
+    z-index: 1;
 }
 
 .prev-btn:hover, .next-btn:hover {
