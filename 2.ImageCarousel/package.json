@@ -14,6 +14,7 @@
     "http-server": "^0.12.3"
   },
   "devDependencies": {
-    "cypress": "^7.1.0"
+    "cypress": "^7.1.0",
+    "cypress-file-upload": "^5.0.6"
   }
 }
