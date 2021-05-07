@@ -15,6 +15,7 @@ img {
     display: flex;
     align-items: center;
     position: relative;
+    margin-left: 64px;
 }
 
 .poster-container {
@@ -117,4 +118,11 @@ img {
     width: 22px;
     height: 22px;
     margin-left: 12px;
+}
+
+@media (max-width: 768px) {
+    .movie {
+        transform: scale(0.5);
+        margin-left: 32px;
+    }
 }
