@@ -112,6 +112,7 @@ img {
 
 .star-background img {
     width: auto;
+    width: 50px;
 }
 
 .icon-remove-star {
