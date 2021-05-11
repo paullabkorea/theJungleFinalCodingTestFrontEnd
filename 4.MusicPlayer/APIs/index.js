@@ -12,11 +12,11 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "../src")));
 app.use("/public", express.static(path.join(__dirname, "./public")));
 
-app.get("/files", (request, response) => {});
+app.get("/music", (request, response) => {
+  const musics = db.get("musics");
 
-const baseAssetPath = '/public/musics';
-
-app.get("/files/:nodeId", (request, response) => {});
+  return response.json({ musics });
+});
 
 app.get("/", (request, response) => {
   response.sendFile(path.join(__dirname, "../src/index.html"));
