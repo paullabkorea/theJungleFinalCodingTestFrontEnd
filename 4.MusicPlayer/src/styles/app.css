@@ -1,3 +1,8 @@
+#app {
+	height: calc(100vh - 70px);
+	width: 100%;
+}
+
 .intro {
 	display: flex;
 	justify-content: center;
@@ -13,4 +18,43 @@
 .intro img {
 	width: 134px;
 	height: 64px;
+}
+
+.contents-top5 {
+	height: 100%;
+}
+
+.top5-roof {
+	position: relative;
+	height: 35%;
+	background-color: rgba(155, 82, 224, 0.8);
+}
+
+.top5-roof img {
+	margin: 24px;
+	width: 30%;
+}
+
+.top5-list {
+	height: 65%;
+}
+
+.app-controller {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	bottom: 0;
+}
+
+.app-controller li {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.button-app-controller {
+	width: 100%;
+	height: 100%;
 }
