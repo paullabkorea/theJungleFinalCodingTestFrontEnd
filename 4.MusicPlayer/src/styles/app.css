@@ -110,3 +110,14 @@
 .on .icon-search {
 	background-image: url(../assets/icons/search_on.png);
 }
+
+.contents-playlist .playlist-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 54px;
+	background-color: var(--main-color);
+	color: #FFF;
+	font-weight: bold;
+	line-height: 21px;
+}
