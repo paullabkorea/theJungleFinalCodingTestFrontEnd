@@ -4,7 +4,6 @@
 
 #app {
 	height: calc(100vh - 80px);
-	min-height: 640px;
 	width: 100%;
 }
 
@@ -171,7 +170,7 @@ img {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	padding: 80px 34px 36px;
+	padding: 60px 34px 16px;
 	overflow: scroll;
 }
 
@@ -190,8 +189,6 @@ img {
 }
 
 .play-view .cover-wrapper {
-	width: 292px;
-	height: 292px;
 	margin: 34px auto 26px;
 	border-radius: 16px;
 	overflow: hidden;
