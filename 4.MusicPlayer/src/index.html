@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">
-        <h1 style="position:absolute;visibility:hidden;">Music Player</h1>
+        <h1 class="invisible-text">Music Player</h1>
             <div class="intro"  style="display:none;">
                 <img src="assets/images/intro-logo.png"/>
             </div>
@@ -24,13 +24,22 @@
             </article>
             <ul class="app-controller">
                 <li>
-                    <button class="button-app-controller">Top5</button>
+                    <button class="button-app-controller">
+                        <i class="tab-icon icon-top5"></i>
+                        Top5
+                    </button>
                 </li>
                 <li>
-                   <button class="button-app-controller">play list</button>
+                   <button class="button-app-controller">
+                       <i class="tab-icon icon-playlist"></i>
+                       play list
+                   </button>
                </li>
                <li>
-                   <button class="button-app-controller">Search</button>
+                   <button class="button-app-controller">
+                       <i class="tab-icon icon-search"></i>
+                       Search
+                   </button>
                </li>
            </ul>
     </div>

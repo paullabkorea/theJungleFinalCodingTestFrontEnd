@@ -1,3 +1,7 @@
+:root {
+	--main-color: #9B51E0
+}
+
 #app {
 	height: calc(100vh - 70px);
 	width: 100%;
@@ -12,7 +16,7 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: #9B51E0;
+	background-color: var(--main-color);
 }
 
 .intro img {
@@ -32,7 +36,7 @@
 
 .top5-roof img {
 	margin: 24px;
-	width: 30%;
+	width: 108px;
 }
 
 .top5-list {
@@ -46,15 +50,63 @@
 	width: 100%;
 	height: 80px;
 	bottom: 0;
+	background-color: #f2f2f2;
 }
 
 .app-controller li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 10px;
+}
+
+.app-controller li.on {
+	color: var(--main-color);
 }
 
 .button-app-controller {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 100%;
+}
+
+.invisible-text {
+	position: fixed;
+	top: -100px;
+}
+
+.tab-icon {
+	display: block;
+	width: 26px;
+	height: 26px;
+	margin-bottom: 6px;
+	background-size: 26px;
+	background-repeat: no-repeat;
+}
+
+.icon-top5 {
+	background-image: url(../assets/icons/music.png);
+}
+
+.on .icon-top5 {
+	background-image: url(../assets/icons/music_on.png);
+}
+
+.icon-playlist {
+	background-image: url(../assets/icons/layers.png);
+}
+
+.on .icon-playlist {
+	background-image: url(../assets/icons/layers_on.png);
+}
+
+.icon-search {
+	background-image: url(../assets/icons/search.png);
+}
+
+.on .icon-search {
+	background-image: url(../assets/icons/search_on.png);
 }
