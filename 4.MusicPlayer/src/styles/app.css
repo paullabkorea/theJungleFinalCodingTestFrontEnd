@@ -121,3 +121,32 @@
 	font-weight: bold;
 	line-height: 21px;
 }
+
+.search-controller {
+	position: relative;
+	padding: 23px;
+}
+
+.search-input {
+	width: calc(100% - 36px);
+	width: -webkit-fill-available;
+	border: none;
+	border-radius: 35px;
+	background-color: #f2f2f2;
+	height: 36px;
+	padding: 0 18px;
+}
+
+.search-button {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
+
+.icon-search-controller {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background-image: url(../assets/icons/tiny_search.png);
+	background-size: 20px;
+}
