@@ -11,9 +11,6 @@
 <body>
     <div id="app">
         <h1 class="invisible-text">Music Oreum</h1>
-            <div class="intro"  style="display:none;">
-                <img src="assets/images/intro-logo.png"/>
-            </div>
             <article class="contents-top5" style="display: none;">
                 <div class="top5-roof">
                     <img src="assets/images/intro-logo.png"/>
@@ -25,7 +22,7 @@
         <article class="contents-playlist" style="display: none;">
             <h2 class="playlist-title">MY PLAYLIST</h2>
         </article>
-        <article class="contents-search" style="display: none;">
+        <article class="contents-search">
             <div class="search-controller">
                 <input class="search-input" type="text" placeholder="검색"/>
                 <button class="search-button">
@@ -33,72 +30,7 @@
                 </button>
             </div>
         </article>
-            <ul class="app-controller">
-                <li>
-                    <button class="button-app-controller">
-                        <i class="tab-icon icon-top5"></i>
-                        Top5
-                    </button>
-                </li>
-                <li>
-                   <button class="button-app-controller">
-                       <i class="tab-icon icon-playlist"></i>
-                       play list
-                   </button>
-               </li>
-               <li>
-                   <button class="button-app-controller">
-                       <i class="tab-icon icon-search"></i>
-                       Search
-                   </button>
-               </li>
-           </ul>
-        <article class="play-view">
-            <div class="play-view-container">
-                <h2 class="invisible-text">Play View</h2>
-                <button class="back-button">
-                    <i class="icon-controller-back"></i>
-                </button>
-                <div class="cover-wrapper">
-                    <img src="http://localhost:3000/public/images/cover/19th_floor.png" />
-                </div>
-                <div class="music-information">
-                    <h3 class="music-title">Where We Wanna Go</h3>
-                    <span class="music-artist-name">Patrick Patrikios</span>
-                </div>
-                <div class="play-view-controller">
-                    <div class="controller-container">
-                        <button class="control-button">
-                            <i class="icon-controller-repeat"></i>
-                        </button>
-                        <button class="control-button">
-                            <i class="icon-controller-backward"></i>
-                        </button>
-                        <button class="control-button">
-                            <i class="icon-controller-play"></i>
-                        </button>
-                        <button class="control-button">
-                            <i class="icon-controller-forward"></i>
-                        </button>
-                        <button class="control-button">
-                            <i class="icon-controller-rotate"></i>
-                        </button>
-                    </div>
-                    <div class="progress-container">
-                        <div class="progress">
-                            <div class="progress-bar">
-                                <div class="progress-control-circle"></div>
-                            </div>
-                        </div>
-                        <div class="progress-time">
-                            <div class="current-time">1:43</div>
-                            <div class="end-time">3:16</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
     </div>
-    <script type="module" src="javascripts/index.js"></script>
+    <script type="module" src="./javascripts/index.js"></script>
 </body>
 </html>

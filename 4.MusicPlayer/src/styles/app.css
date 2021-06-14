@@ -21,6 +21,7 @@ img {
 	left: 0;
 	right: 0;
 	background-color: var(--main-color);
+	z-index: 9000;
 }
 
 .intro img {
@@ -162,6 +163,7 @@ img {
 	bottom: 0;
 	right: 0;
 	background-color: #FFF;
+	z-index: 5000;
 }
 
 .play-view .play-view-container {
