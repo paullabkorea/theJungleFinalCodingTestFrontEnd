@@ -5,5 +5,9 @@
 
 > 다음은 참고해야할 CSS 규칙입니다.
 
+### Intro
+- image 파일 경로: `assets/images/intro-logo.png`
+
 ### tab-controller
 - `li` 에 `on` 클래스를 통해서 현재 동작여부를 확인합니다.
+- 
