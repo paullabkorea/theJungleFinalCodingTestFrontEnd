@@ -46,6 +46,62 @@ img {
 
 .top5-list {
 	height: 65%;
+	padding: 18px 0;
+}
+
+.top5-list li {
+	display: flex;
+}
+
+.music-rank {
+	display: flex;
+	width: 48px;
+	justify-content: center;
+	align-items: center;
+	font-size: 14px;
+	font-weight: bold;
+	color: var(--main-color);
+}
+
+.music-content {
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+    padding-right: 20px;
+}
+
+.music-cover {
+	width: 50px;
+	height: 50px;
+	margin-right: 16px;
+	border-radius: 5px;
+}
+
+.music-data {
+	display: flex;
+}
+
+.music-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.music-info .music-title {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+}
+
+.music-info .music-artist {
+	font-size: 12px;
+	line-height: 18px;
+	color: #828282;
+}
+
+.music-simple-controller {
+	display: flex;
+	align-items: center;
 }
 
 .app-controller {
@@ -83,38 +139,7 @@ img {
 	top: -100px;
 }
 
-.tab-icon {
-	display: block;
-	width: 26px;
-	height: 26px;
-	margin-bottom: 6px;
-	background-size: 26px;
-	background-repeat: no-repeat;
-}
 
-.icon-top5 {
-	background-image: url(../assets/icons/music.png);
-}
-
-.on .icon-top5 {
-	background-image: url(../assets/icons/music_on.png);
-}
-
-.icon-playlist {
-	background-image: url(../assets/icons/layers.png);
-}
-
-.on .icon-playlist {
-	background-image: url(../assets/icons/layers_on.png);
-}
-
-.icon-search {
-	background-image: url(../assets/icons/search.png);
-}
-
-.on .icon-search {
-	background-image: url(../assets/icons/search_on.png);
-}
 
 .contents-playlist .playlist-title {
 	display: flex;
@@ -319,4 +344,58 @@ img {
 
 .end-time {
 	color: #BDBDBD;
+}
+
+.tab-icon {
+	display: block;
+	width: 26px;
+	height: 26px;
+	margin-bottom: 6px;
+	background-size: 26px;
+	background-repeat: no-repeat;
+}
+
+.icon {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-bottom: 6px;
+	background-size: 20px;
+	background-repeat: no-repeat;
+}
+
+.icon + .icon {
+	margin-left: 8px;
+}
+
+.icon-play {
+	background-image: url(../assets/icons/tiny_play.png);
+}
+
+.icon-plus {
+	background-image: url(../assets/icons/plus.png);
+}
+
+.icon-top5 {
+	background-image: url(../assets/icons/music.png);
+}
+
+.on .icon-top5 {
+	background-image: url(../assets/icons/music_on.png);
+}
+
+.icon-playlist {
+	background-image: url(../assets/icons/layers.png);
+}
+
+.on .icon-playlist {
+	background-image: url(../assets/icons/layers_on.png);
+}
+
+.icon-search {
+	background-image: url(../assets/icons/search.png);
+}
+
+.on .icon-search {
+	background-image: url(../assets/icons/search_on.png);
 }
