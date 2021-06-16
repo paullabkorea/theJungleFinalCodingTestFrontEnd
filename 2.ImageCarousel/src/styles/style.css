@@ -1,14 +1,6 @@
 @import 'reset.css';
 
 @font-face {
-    font-family: "NEXON Lv1 Gothic OTF";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
-      format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
@@ -20,19 +12,20 @@
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: 500;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf") format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
     font-weight: 700;
     src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2") format('woff2'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff") format('woff'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf") format('opentype');
+}
+
+.util_ir{
+    display: block;
+    overflow: hidden;
+    width:1px;
+    height:1px;
+    font-size: 1px;
+    line-height:0;
+    text-indent: -9999px;
 }
 
 body {
@@ -40,22 +33,15 @@ body {
     font-weight: 400;
 }
 
-.section-name {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-#image-upload {
+.image-upload {
     position: fixed;
     top: 70px;
     left: 100px;
+    z-index: 10;
 }
 
-input[id="image-upload__input"] + label {
+#image-upload__input + label {
+    display: block;
     padding: 15px 30px;
     background-color: #2F80ED;
     border-radius: 10px;
@@ -65,7 +51,7 @@ input[id="image-upload__input"] + label {
     cursor: pointer;
 }
 
-input[id="image-upload__input"] {
+#image-upload__input {
     position: absolute;
     left: -10000px;
     top: auto;
