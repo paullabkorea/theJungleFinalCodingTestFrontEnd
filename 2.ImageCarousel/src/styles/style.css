@@ -62,18 +62,17 @@ body {
 
 #carousel {
     display: flex;
+    height:100vh;
     justify-content: center;
+    align-items: center;
 }
 
 .carousel__wrap {
     width: 1500px;
-    height: 70vh;
     display: flex;
     justify-content: center;
-    align-items: center;
     perspective: 1000px;
     transform-style: preserve-3d;
-    position: relative;
 }
 
 .carousel__list {
@@ -86,8 +85,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 250px;
+    height:100%;
     -webkit-box-reflect: below 20px linear-gradient(transparent 45%, rgba(255, 255, 255, 0.25));
     overflow: hidden;
     border-radius: 10px;
@@ -97,8 +95,9 @@ body {
 }
 
 .carousel__item > img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     filter: brightness(70%);
 }
 
@@ -115,7 +114,6 @@ body {
     width: 140px;
     height: 62px;
     top: 50%;
-    transform: translateY(-50%);
     background: #FFF;
     border: 3px solid #828282;
     border-radius: 36px;
@@ -133,8 +131,10 @@ body {
 
 .prev-btn {
     left: 0;
+    transform: translateY(-50%) translateZ(250px) translateX(180px);
 }
 
 .next-btn {
     right: 0;
+    transform: translateY(-50%) translateZ(250px) translateX(-180px);
 }
