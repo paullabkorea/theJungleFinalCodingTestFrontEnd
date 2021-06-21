@@ -18,7 +18,7 @@
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf") format('opentype');
 }
 
-.util_ir{
+.util-ir{
     display: block;
     overflow: hidden;
     width:1px;
@@ -35,14 +35,17 @@ body {
 
 .image-upload {
     position: fixed;
-    top: 70px;
-    left: 100px;
+    top: 77px;
+    left: 149px;
     z-index: 10;
 }
 
-#image-upload__input + label {
+#image-upload-input + label {
     display: block;
-    padding: 15px 30px;
+    width:185px;
+    height:54px;
+    text-align: center;
+    line-height:54px;
     background-color: #2F80ED;
     border-radius: 10px;
     color: #FFF;
@@ -51,7 +54,7 @@ body {
     cursor: pointer;
 }
 
-#image-upload__input {
+#image-upload-input {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -67,7 +70,7 @@ body {
     align-items: center;
 }
 
-.carousel__wrap {
+.carousel-wrap {
     width: 1500px;
     display: flex;
     justify-content: center;
@@ -75,13 +78,13 @@ body {
     transform-style: preserve-3d;
 }
 
-.carousel__list {
+.carousel-list {
     width: 250px;
     height: 250px;
     position: relative;
 }
 
-.carousel__item {
+.carousel-item {
     position: absolute;
     top: 0;
     left: 0;
@@ -94,7 +97,7 @@ body {
     transition: all .5s;
 }
 
-.carousel__item > img {
+.carousel-item > img {
     display: block;
     width: 100%;
     height: 100%;

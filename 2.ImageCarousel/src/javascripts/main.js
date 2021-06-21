@@ -1,13 +1,13 @@
 (() => {
     // 엘리먼트 가져오기
-    const carouselUl = document.querySelector(".carousel__list");
-    const imageInput = document.querySelector("#image-upload__input");
+    const carouselUl = document.querySelector(".carousel-list");
+    const imageInput = document.querySelector("#image-upload-input");
     const prevButton = document.querySelector(".prev-btn");
     const nextButton = document.querySelector(".next-btn");
 
     // 이미지 위치 변경
     function changeTransform() {
-        const items = document.querySelectorAll(".carousel__item");
+        const items = document.querySelectorAll(".carousel-item");
 
         items.forEach((e, i) => {
             let degree = 360 / items.length;
@@ -39,7 +39,7 @@
 
     // Next, Prev 이동 버튼
     function moveNext() {
-        const items = document.querySelectorAll(".carousel__item");
+        const items = document.querySelectorAll(".carousel-item");
 
         if (items.length > 1) {
             const currentItem = document.querySelector(".now");
@@ -53,7 +53,7 @@
     }
 
     function movePrev() {
-        const items = document.querySelectorAll(".carousel__item");
+        const items = document.querySelectorAll(".carousel-item");
         const currentItem = document.querySelector(".now");
         const lastItem = items[items.length - 1];
 
@@ -76,10 +76,10 @@
     function createTag(url) {
         const list = document.createElement("li");
         const img = document.createElement("img");
-        list.setAttribute("class", "carousel__item");
+        list.setAttribute("class", "carousel-item");
         img.src = url;
         list.appendChild(img);
-        const items = document.querySelectorAll(".carousel__item");
+        const items = document.querySelectorAll(".carousel-item");
 
         items.forEach(item => {
             item.classList.remove('now');
@@ -91,7 +91,7 @@
 
     // 이미지 업로드
     function uploadImg(value) {
-        const items = document.querySelectorAll(".carousel__item");
+        const items = document.querySelectorAll(".carousel-item");
         if (value.files) {
             const reader = new FileReader();
 
