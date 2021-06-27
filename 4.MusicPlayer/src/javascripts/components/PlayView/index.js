@@ -1,11 +1,43 @@
 export default class PlayView {
     
-    constructor() {
-        this.parentElement = document.createElement('#app');
+    constructor(props) {
+        const { parentElement } = props;
+        this.parentElement = parentElement;
+        this.audio = new Audio();
+        this.bindEvents();
     }
 
     static createRenderElement() {
 
+    }
+
+    static calculateTime(secs) {
+        const minutes = Math.floor(secs / 60);
+        const seconds = Math.floor(secs % 60);
+        const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+        return `${minutes}:${returnedSeconds}`;
+    }
+
+    bindEvents() {
+        this.audio.addEventListener('loadedmetadata', (event) => {
+            
+            console.log(PlayView.calculateTime(this.audio.duration));
+            console.log(event);
+        })
+        
+        this.audio.addEventListener('play', (event) => {
+            console.log(event);
+        })
+
+        this.audio.addEventListener('timeupdate', (event) => {
+            // console.log(event);
+        })
+    }
+
+    playMusic(payload = {}) {
+        const { musics, musicIndex } = payload;
+        this.audio.src = musics[musicIndex].source;
+        this.audio.play();
     }
 
     render() {

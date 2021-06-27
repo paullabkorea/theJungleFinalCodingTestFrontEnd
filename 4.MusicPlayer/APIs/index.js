@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, "../src")));
 app.use("/public", express.static(path.join(__dirname, "./public")));
 
-app.get("/music", (request, response) => {
+app.get("/musics", (request, response) => {
   const musics = db.get("musics");
 
   return response.json({ musics });

@@ -1,5 +1,7 @@
-import Intro from './components/Intro/index.js';
-import TabButtons from './components/TabButtons/index.js';
+import App from './App.js';
 
-new Intro().render();
-new TabButtons().render();
+const config = {
+    el: '#app'
+}
+
+new App(config).setup();

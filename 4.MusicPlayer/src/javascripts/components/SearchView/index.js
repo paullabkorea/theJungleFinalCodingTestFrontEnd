@@ -1,4 +1,4 @@
-class SearchView {
+export default class SearchView {
     constructor() {
 
     }

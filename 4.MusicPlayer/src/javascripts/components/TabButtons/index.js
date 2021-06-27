@@ -1,7 +1,8 @@
 export default class TabButtons {
 
-    constructor() {
-        this.parentElement = document.querySelector('#app');
+    constructor(props) {
+        const { parentElement } = props;
+        this.parentElement = parentElement;
         this.renderElement = TabButtons.createRenderElement();
     }
 

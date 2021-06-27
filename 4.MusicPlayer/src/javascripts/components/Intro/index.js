@@ -1,7 +1,8 @@
 export default class Intro {
 
-    constructor() {
-        this.parentElement = document.querySelector('#app');
+    constructor(props) {
+        const { parentElement } = props;
+        this.parentElement = parentElement;
         this.renderElement = Intro.createRenderElement();
     }
 
@@ -16,13 +17,11 @@ export default class Intro {
         return introContainer;
     }
 
-    render() {
+    show() {
         this.parentElement.append(this.renderElement);
-        
-        setTimeout(() => {
-            this.parentElement.removeChild(this.renderElement);
-        }, 1500);
+    }
 
-        return this;
+    hide() {
+        this.parentElement.removeChild(this.renderElement);
     }
 }
