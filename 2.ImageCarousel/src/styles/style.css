@@ -1,14 +1,6 @@
 @import 'reset.css';
 
 @font-face {
-    font-family: "NEXON Lv1 Gothic OTF";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff")
-      format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
     font-weight: 400;
@@ -20,19 +12,20 @@
 @font-face {
     font-family: 'Noto Sans KR';
     font-style: normal;
-    font-weight: 500;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Medium.otf") format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
     font-weight: 700;
     src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2") format('woff2'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff") format('woff'),
     url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf") format('opentype');
+}
+
+.util-ir{
+    display: block;
+    overflow: hidden;
+    width:1px;
+    height:1px;
+    font-size: 1px;
+    line-height:0;
+    text-indent: -9999px;
 }
 
 body {
@@ -40,23 +33,19 @@ body {
     font-weight: 400;
 }
 
-.section-name {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
-
-#image-upload {
+.image-upload {
     position: fixed;
-    top: 70px;
-    left: 100px;
+    top: 77px;
+    left: 149px;
+    z-index: 10;
 }
 
-input[id="image-upload__input"] + label {
-    padding: 15px 30px;
+#image-upload-input + label {
+    display: block;
+    width:185px;
+    height:54px;
+    text-align: center;
+    line-height:54px;
     background-color: #2F80ED;
     border-radius: 10px;
     color: #FFF;
@@ -65,7 +54,7 @@ input[id="image-upload__input"] + label {
     cursor: pointer;
 }
 
-input[id="image-upload__input"] {
+#image-upload-input {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -76,32 +65,30 @@ input[id="image-upload__input"] {
 
 #carousel {
     display: flex;
-    justify-content: center;
-}
-
-.carousel__wrap {
-    width: 1500px;
-    height: 70vh;
-    display: flex;
+    height:100vh;
     justify-content: center;
     align-items: center;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-    position: relative;
 }
 
-.carousel__list {
+.carousel-wrap {
+    width: 1500px;
+    display: flex;
+    justify-content: center;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.carousel-list {
     width: 250px;
     height: 250px;
     position: relative;
 }
 
-.carousel__item {
+.carousel-item {
     position: absolute;
     top: 0;
     left: 0;
-    width: 250px;
-    height: 250px;
+    height:100%;
     -webkit-box-reflect: below 20px linear-gradient(transparent 45%, rgba(255, 255, 255, 0.25));
     overflow: hidden;
     border-radius: 10px;
@@ -110,9 +97,10 @@ input[id="image-upload__input"] {
     transition: all .5s;
 }
 
-.carousel__item > img {
+.carousel-item > img {
+    display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     filter: brightness(70%);
 }
 
@@ -129,7 +117,6 @@ input[id="image-upload__input"] {
     width: 140px;
     height: 62px;
     top: 50%;
-    transform: translateY(-50%);
     background: #FFF;
     border: 3px solid #828282;
     border-radius: 36px;
@@ -147,8 +134,10 @@ input[id="image-upload__input"] {
 
 .prev-btn {
     left: 0;
+    transform: translateY(-50%) translateZ(250px) translateX(180px);
 }
 
 .next-btn {
     right: 0;
+    transform: translateY(-50%) translateZ(250px) translateX(-180px);
 }
