@@ -37,7 +37,6 @@ body {
     position: fixed;
     top: 77px;
     left: 149px;
-    z-index: 10;
 }
 
 #image-upload-input + label {
@@ -66,22 +65,22 @@ body {
 #carousel {
     display: flex;
     height:100vh;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* 주 축의 방향에 따라 아이템을 정렬 */
+    align-items: center; /* 주 축을 교차하는 교차축을 따라 아이템을 정렬 */
 }
 
-.carousel-wrap {
+.carousel-cont {
     width: 1500px;
     display: flex;
-    justify-content: center;
-    perspective: 1000px;
-    transform-style: preserve-3d;
+    justify-content: center; /* 주 축의 방향에 따라 아이템을 정렬 */
+    perspective: 1000px; /* 원근감 1000px 만큼의 깊이 */
 }
 
 .carousel-list {
-    width: 250px;
-    height: 250px;
+    width: 348px;
+    height: 348px;
     position: relative;
+    transform-style: preserve-3d; /* perspective 를 부모로 부터 받아 자식요소에도 적용 */
 }
 
 .carousel-item {
@@ -89,7 +88,8 @@ body {
     top: 0;
     left: 0;
     height:100%;
-    -webkit-box-reflect: below 20px linear-gradient(transparent 45%, rgba(255, 255, 255, 0.25));
+    -webkit-box-reflect: below 35px linear-gradient(transparent 45%, rgba(255, 255, 255, 0.25)); 
+    /* ie, 파폭 적용 불가. 컨텐츠의 반사 이미지를 표현. above below left right. linear-gradient : 투명마스크 위에서 아래로 점진적 전환. 투명화 지점, 투명화 농도 */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -97,12 +97,28 @@ body {
     transition: all .5s;
 }
 
+
 .carousel-item > img {
     display: block;
     width: 100%;
     height: 100%;
-    filter: brightness(70%);
+    filter: brightness(70%); /* 흐림 효과나 색상 변형 등 그래픽 효과를 요소에 적용. brightness : 이미지를 밝거나 어둡게 표시 */
 }
+/* filter를 사용하지 않는 경우 */
+/* .carousel-item::before{
+    position:absolute;
+    display: block;
+    content:'';
+    width:100%;
+    height:100%;
+    background:black;
+    opacity: 0.3;
+    z-index: 10;
+}
+
+.carousel-item.now::before{
+    display: none;
+} */
 
 .now {
     transform: rotateY(0deg) translateZ(250px);
@@ -117,6 +133,7 @@ body {
     width: 140px;
     height: 62px;
     top: 50%;
+    margin-top:-31px;
     background: #FFF;
     border: 3px solid #828282;
     border-radius: 36px;
@@ -133,11 +150,9 @@ body {
 }
 
 .prev-btn {
-    left: 0;
-    transform: translateY(-50%) translateZ(250px) translateX(180px);
+    left: 149px;
 }
 
 .next-btn {
-    right: 0;
-    transform: translateY(-50%) translateZ(250px) translateX(-180px);
+    right: 149px;
 }
