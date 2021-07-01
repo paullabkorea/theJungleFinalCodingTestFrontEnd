@@ -1,23 +1,5 @@
 @import 'reset.css';
 
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 400;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf") format('opentype');
-}
-
-@font-face {
-    font-family: 'Noto Sans KR';
-    font-style: normal;
-    font-weight: 700;
-    src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff2") format('woff2'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.woff") format('woff'),
-    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Bold.otf") format('opentype');
-}
-
 .util-ir{
     display: block;
     overflow: hidden;
@@ -28,15 +10,19 @@
     text-indent: -9999px;
 }
 
-body {
-    font-family: 'Noto Sans KR';
-    font-weight: 400;
-}
-
 .image-upload {
-    position: fixed;
+    position: absolute;
     top: 77px;
     left: 149px;
+}
+
+#image-upload-input {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 #image-upload-input + label {
@@ -49,17 +35,9 @@ body {
     border-radius: 10px;
     color: #FFF;
     font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
     cursor: pointer;
-}
-
-#image-upload-input {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
 }
 
 #carousel {
@@ -70,9 +48,9 @@ body {
 }
 
 .carousel-cont {
-    width: 1500px;
-    display: flex;
-    justify-content: center; /* 주 축의 방향에 따라 아이템을 정렬 */
+    /* width: 1500px; */
+    /* display: flex; */
+    /* justify-content: center; 주 축의 방향에 따라 아이템을 정렬 */
     perspective: 1000px; /* 원근감 1000px 만큼의 깊이 */
 }
 
@@ -87,15 +65,28 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    width:100%;
     height:100%;
     -webkit-box-reflect: below 35px linear-gradient(transparent 45%, rgba(255, 255, 255, 0.25)); 
     /* ie, 파폭 적용 불가. 컨텐츠의 반사 이미지를 표현. above below left right. linear-gradient : 투명마스크 위에서 아래로 점진적 전환. 투명화 지점, 투명화 농도 */
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-    background: #FFF;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* 세번째 값은 블러 처리만 */
     transition: all .5s;
 }
+
+/* JS 적용 전 스타일 */
+/* .carousel-item:first-child{
+    transform: rotateY(0deg) translateZ(250px);
+}
+
+.carousel-item:nth-child(2){
+    transform: rotateY(120deg) translateZ(250px) rotateY(-120deg);
+}
+
+.carousel-item:nth-child(3){
+    transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
+} */
 
 
 .carousel-item > img {
@@ -138,6 +129,7 @@ body {
     border: 3px solid #828282;
     border-radius: 36px;
     color: #828282;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 700;
     font-size: 20px;
     cursor: pointer;

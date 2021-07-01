@@ -1,6 +1,6 @@
 class Favorite {
     constructor() {
-       this.favoriteElement = document.querySelector('.content-favorite')
+        this.favoriteElement = document.querySelector('.content-favorite')
     }
 
     setup() {
@@ -11,11 +11,11 @@ class Favorite {
         this.favoriteElement.addEventListener('click', (event) => {
             const { path } = event;
             const element = path.find(element => element.tagName === 'BUTTON');
-        
+
             if (!element) {
                 return;
             }
-        
+
             element.classList.toggle('on');
         });
     }

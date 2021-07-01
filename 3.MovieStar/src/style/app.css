@@ -110,12 +110,12 @@ img {
 
 .star-background {
     display: flex;
-    width: 250px;
-    height: 50px;
+    /* width: 250px;
+    height: 50px; */
 }
 
 .star-background img {
-    width: auto;
+    /* width: auto; */
     width: 50px;
 }
 

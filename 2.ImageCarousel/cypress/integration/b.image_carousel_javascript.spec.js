@@ -9,7 +9,7 @@ describe('ImageCarousel js', () => {
 
     const images = [];
     // get : dom 셀렉터 
-    cy.get('.carousel__list img').each(($img) => {
+    cy.get('.carousel__list img').each(($img) => { // each : 여러개의 요소를 순환
       images.push($img);
     }).then(() => {
       const nextButton = cy.get('button.next-btn');

@@ -54,16 +54,14 @@
 
     function movePrev() {
         const items = document.querySelectorAll(".carousel-item");
-        const currentItem = document.querySelector(".now");
-        const lastItem = items[items.length - 1];
 
         if (items.length > 1) {
-            if (currentItem) {
-                // carouselUl.prepend(lastItem); ie 지원 안함.
-                carouselUl.insertBefore(lastItem, items[0]);
-                currentItem.classList.remove("now");
-                lastItem.classList.add('now');
-            }
+            const currentItem = document.querySelector(".now");
+            const lastItem = carouselUl.lastElementChild;
+
+            carouselUl.insertBefore(lastItem, items[0]);
+            currentItem.classList.remove("now");
+            lastItem.classList.add('now');
         }
         changeTransform();
     }
@@ -93,14 +91,14 @@
     function uploadImg(value) {
         const items = document.querySelectorAll(".carousel-item");
         if (value.files) {
-            const reader = new FileReader();
+            const reader = new FileReader(); // 웹어플리케이션이 file의 내용을 읽을수 있게 만들어주는 객체
 
             reader.onload = e => {
-                const imgUrl = e.target.result;
+                const imgUrl = e.target.result; // 파일의 정보 
                 carouselUl.insertBefore(createTag(imgUrl), items[0]);
                 changeTransform();
             };
-            reader.readAsDataURL(value.files[0]);
+            reader.readAsDataURL(value.files[0]); //readAsDataURL : 컨텐츠를 읽어오는 역할을 합니다. 읽기가 완료되면 onload 이벤트를 트리거합니다.
         }
     }
 
