@@ -1,13 +1,17 @@
 export default class PlayList {
-    constructor(props) {
+    constructor() {
+        this.rootElement = PlayList.createRootElement();
+    }
 
+    static createRootElement() {
+        const rootElement = document.createElement('ARTICLE');
+        rootElement.classList.add('contents-playlist');
+
+        return rootElement;
     }
 
     render() {
-        return `
-            <article class="contents-playlist" style="display: none;">
-                <h2 class="playlist-title">MY PLAYLIST</h2>
-            </article>
-        `
+        this.rootElement.innerHTML = `<h2 class="playlist-title">MY PLAYLIST</h2>`;
+        return this.rootElement;
     }
 }

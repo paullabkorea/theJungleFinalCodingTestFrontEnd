@@ -1,8 +1,7 @@
 export default class Intro {
 
-    constructor(props) {
-        const { parentElement } = props;
-        this.parentElement = parentElement;
+    constructor() {
+        this.parentElement = document.querySelector('body');
         this.renderElement = Intro.createRenderElement();
     }
 

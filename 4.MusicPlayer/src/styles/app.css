@@ -380,6 +380,10 @@ img {
 	background-image: url(../assets/icons/tiny_play.png);
 }
 
+.icon-pause {
+	background-image: url(../assets/icons/pause.png);
+}
+
 .icon-plus {
 	background-image: url(../assets/icons/plus.png);
 }

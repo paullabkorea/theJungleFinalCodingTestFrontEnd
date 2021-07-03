@@ -1,8 +1,6 @@
 export default class PlayView {
     
-    constructor(props) {
-        const { parentElement } = props;
-        this.parentElement = parentElement;
+    constructor() {
         this.audio = new Audio();
         this.bindEvents();
     }
@@ -35,9 +33,14 @@ export default class PlayView {
     }
 
     playMusic(payload = {}) {
+        this.pause();
         const { musics, musicIndex } = payload;
         this.audio.src = musics[musicIndex].source;
         this.audio.play();
+    }
+
+    pause() {
+        this.audio.pause();
     }
 
     render() {
