@@ -1,20 +1,4 @@
-/**
- * 태그와 클래스명만을 판단하는 함수입니다. 아이디 등 나머지는 현재 지원하지 않습니다.
- */
-const getClosestElementByClassName = (element, selector) => {
-    let evaluate = false; 
-    if (/^\./.test(selector)) {
-        evaluate = element.classList.contains(selector);
-    } else {
-        evaluate = element.tagName === selector.toUpperCase();
-    }
-
-    if (evaluate) {
-        return element;
-    }
-
-    return getClosestElementByClassName(element.parentElement, selector);
-}
+import { findIndexListElement, getClosestElement } from '../../utils/index.js';
 
 export default class TabButtons {
 
@@ -48,9 +32,8 @@ export default class TabButtons {
 
     bindEvents() {
         this.renderElement.addEventListener('click', (event) => {
-            const element = getClosestElementByClassName(event.target, 'li');
-            const listItems = element.parentElement.querySelectorAll('li');
-            const currentIndex = Array.prototype.slice.call(listItems).findIndex(listItem => listItem === element);
+            const element = getClosestElement(event.target, 'li');
+            const currentIndex = findIndexListElement(element);
             this.emit('clickTab', { currentIndex });
         })
     }
@@ -66,7 +49,7 @@ export default class TabButtons {
     }
 
     emit(eventName, payload) {
-        this.events[eventName](payload);
+        this.events[eventName] && this.events[eventName](payload);
     }
 
     render() {
