@@ -49,6 +49,28 @@ export default class App {
         // 플레이리스트 컴포넌트 이벤트
         this.playList.on('play', (payload) => this.playView.playMusic(payload));
         this.playList.on('pause', () => this.playView.pause());
+        // 검색 컴포넌트 이벤트
+        this.searchView.on('searchMusic', (query) => {
+            if (!query) {
+                return this.searchView.setSearchResult([]);;
+            }
+                
+            const searchedMusics = this.topMusics.musics.filter(music => {
+                const { artists, title } = music;
+                const upperCaseQuery = query.toUpperCase();
+                const filteringName = artists.some(artist => artist.toUpperCase().includes(upperCaseQuery));
+                const filteringTitle = title.toUpperCase().includes(upperCaseQuery);
+
+                return filteringName || filteringTitle;
+            })
+            this.searchView.setSearchResult(searchedMusics);
+        });
+        this.searchView.on('play', (payload) => this.playView.playMusic(payload));
+        this.searchView.on('pause', () => this.playView.pause());
+        this.searchView.on('addPlayList', (payload) => {
+            const { musics, musicIndex } = payload;
+            this.playList.add(musics[musicIndex]);
+        });
     }
 
     async fetchMusics() {
