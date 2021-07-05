@@ -33,15 +33,15 @@ export default class PlayList {
         const listItemElement = getClosestElement(target, 'LI');
         const musicIndex = findIndexListElement(listItemElement);
         const isPlaying = this.musicList[musicIndex].playing;
-        
+        this.musicList.forEach(musicInfo => {
+            musicInfo.playing = false
+        });
+        this.rootElement.querySelectorAll('LI').forEach(element => element.classList.remove('on'));
         if (!isPlaying) {
-            this.musicList.forEach(musicInfo => {
-                musicInfo.playing = false
-            });
+            listItemElement.classList.add('on');
             this.musicList[musicIndex].playing = true;
             this.emit('play', { musics: this.musicList, musicIndex });
         } else {
-            this.musicList[musicIndex].playing = false;
             this.emit('pause');
         }
        

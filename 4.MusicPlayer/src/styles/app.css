@@ -166,6 +166,10 @@ img {
 	border-bottom: 1px solid #E0E0E0;
 }
 
+.music-list li.on .music-title {
+	color:var(--main-color);
+}
+
 .search-controller {
 	position: relative;
 	padding: 23px;
