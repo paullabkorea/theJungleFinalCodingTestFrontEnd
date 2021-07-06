@@ -47,7 +47,11 @@ export default class App {
             this.playList.add(musics[musicIndex]);
         });
         // 플레이리스트 컴포넌트 이벤트
-        this.playList.on('play', (payload) => this.playView.playMusic(payload));
+        this.playList.on('play', (payload) => {
+            const playView = this.playView.render();
+            this.rootElement.append(playView);
+            this.playView.playMusic(payload);
+        });
         this.playList.on('pause', () => this.playView.pause());
         // 검색 컴포넌트 이벤트
         this.searchView.on('searchMusic', (query) => {

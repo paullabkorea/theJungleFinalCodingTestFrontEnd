@@ -2,11 +2,15 @@ export default class PlayView {
     
     constructor() {
         this.audio = new Audio();
+        this.rootElement = PlayView.createRenderElement();
         this.bindEvents();
     }
 
     static createRenderElement() {
+        const playViewWrapper = document.createElement('ARTICLE');
+        playViewWrapper.classList.add('play-view');
 
+        return playViewWrapper;
     }
 
     static calculateTime(secs) {
@@ -18,7 +22,6 @@ export default class PlayView {
 
     bindEvents() {
         this.audio.addEventListener('loadedmetadata', (event) => {
-            
             console.log(PlayView.calculateTime(this.audio.duration));
             console.log(event);
         })
@@ -28,7 +31,11 @@ export default class PlayView {
         })
 
         this.audio.addEventListener('timeupdate', (event) => {
-            // console.log(event);
+            const currentSeconds = event.timeStamp / 1000;
+            const audioProgress = currentSeconds / this.audio.duration * 100;
+            const controlProgress = audioProgress > 100 ? 100 : audioProgress;
+            const progressBarElement = this.rootElement.querySelector('.progress-bar');
+            progressBarElement.style.width = `${controlProgress}%`;
         })
     }
 
@@ -44,9 +51,8 @@ export default class PlayView {
     }
 
     render() {
-        return `
-        <article class="play-view">
-            <div class="play-view-container">
+        this.rootElement.innerHTML = `
+        <div class="play-view-container">
                 <h2 class="invisible-text">Play View</h2>
                 <button class="back-button">
                     <i class="icon-controller-back"></i>
@@ -89,7 +95,7 @@ export default class PlayView {
                     </div>
                 </div>
             </div>
-        </article>
         `;
+        return this.rootElement;
     }
 }
