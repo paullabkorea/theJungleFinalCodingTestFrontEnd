@@ -23,7 +23,7 @@ export default class TopMusics {
     }
 
     emit(eventName, payload) {
-        this.events[eventName](payload);
+        this.events[eventName] && this.events[eventName](payload);
     }
 
     bindEvents() {
@@ -55,6 +55,7 @@ export default class TopMusics {
                     break;
                 }
                 case 'icon-plus': {
+                    this.requestAddPlayList(target);
                     break;
                 }
             };

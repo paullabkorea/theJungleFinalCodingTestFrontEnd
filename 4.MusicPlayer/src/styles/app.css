@@ -160,6 +160,16 @@ img {
 	background-color: var(--main-color);
 }
 
+.music-list li {
+	padding: 18px 0;
+	margin: 0 23px;
+	border-bottom: 1px solid #E0E0E0;
+}
+
+.music-list li.on .music-title {
+	color:var(--main-color);
+}
+
 .search-controller {
 	position: relative;
 	padding: 23px;
@@ -172,7 +182,7 @@ img {
 	border-radius: 35px;
 	background-color: #f2f2f2;
 	height: 36px;
-	padding: 0 18px;
+	padding: 0 48px 0 24px;
 }
 
 .search-button {
@@ -386,6 +396,10 @@ img {
 
 .icon-plus {
 	background-image: url(../assets/icons/plus.png);
+}
+
+.icon-minus {
+	background-image: url(../assets/icons/minus.png);
 }
 
 .icon-top5 {
