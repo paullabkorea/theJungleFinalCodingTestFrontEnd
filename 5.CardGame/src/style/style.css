@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#app{
+    width:100vw;
+    height:100vh;
+}
+.cont-board{
+    max-width:1040px;
+    margin:0 auto;
+}
+.cont-board .list-card{
+    display:flex;
+    flex-wrap: wrap;
+    height:564px;
+    margin-right:-22px;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.list-card li{
+    background: green;
+    width: 19%;
+    height: 276px;
+    box-sizing: border-box;
+}
+
+.list-card li img{
+    width:100%;
+    height:100%;
+}
