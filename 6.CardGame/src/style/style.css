@@ -54,6 +54,11 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* 세번째 값은 블러 처리만 */
     transform-style: preserve-3d;
     transition:.5s;
+    transform:rotateY(180deg);
+}
+
+.list-card li.on{
+    transform:rotateY(0deg);
 }
 
 .list-card li::after, .list-card li::before{
