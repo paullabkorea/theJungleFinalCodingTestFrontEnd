@@ -15,10 +15,9 @@ class Shuffling {
         let dataDouble = (this.data).concat(this.data);
 
         // 랜덤 함수의 범위는 0 ~ 0.999999 ...
-        // 1 ~ 6까지의 범위를 구하고 싶을 경우.
-        // 곱하기 6을 했을 때 0 ~ 5.999999 ...
-        // 0은 나올 필요가 없기 때문에 랜덤 함수의 결과에 1을 더한다. 1 ~ 6.999999
-        // 소수점 이하는 나올 필요가 없기 때문에 내림 Math.floor()
+        // 0 ~ 9까지의 범위를 구하고 싶을 경우.
+        // 곱하기 10을 했을 때 0 ~ 9.999999 ...
+        // 소수점 이하는 나올 필요가 없기 때문에 내림 Math.floor()aa
         while (dataDouble.length > 0) {
             const randomNum = Math.floor(Math.random() * dataDouble.length); //0~9까지의 숫자 중 하나를 랜덤하게 생성
             if (dataDouble[randomNum]) { // 해당인덱스에 요소가 있다면.
