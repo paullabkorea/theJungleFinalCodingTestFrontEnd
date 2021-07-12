@@ -302,6 +302,14 @@ img {
 	background-size: 40px;
 }
 
+.play-view .icon-controller-pause {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-image: url(../assets/icons/pause.png);
+	background-size: 40px;
+}
+
 .play-view .icon-controller-forward {
 	display: block;
 	width: 24px;
@@ -327,9 +335,7 @@ img {
 }
 
 .progress {
-	height: 4px;
-	background-color: #E0E0E0;
-	border-radius: 4px;
+	width: 100%;
 }
 
 .progress-bar {
@@ -424,4 +430,8 @@ img {
 
 .on .icon-search {
 	background-image: url(../assets/icons/search_on.png);
+}
+
+.hide {
+	display: none;
 }

@@ -48,9 +48,8 @@ export default class App {
         });
         // 플레이리스트 컴포넌트 이벤트
         this.playList.on('play', (payload) => {
-            const playView = this.playView.render();
-            this.rootElement.append(playView);
             this.playView.playMusic(payload);
+            this.playView.show();
         });
         this.playList.on('pause', () => this.playView.pause());
         // 검색 컴포넌트 이벤트
@@ -75,6 +74,10 @@ export default class App {
             const { musics, musicIndex } = payload;
             this.playList.add(musics[musicIndex]);
         });
+        // 플레이뷰 컴포넌트 이벤트
+        this.playView.on('backward', () => this.playList.playPrev());
+        this.playView.on('forward', () => this.playList.playNext());
+        this.playView.on('musicEnded', (payload) => this.playList.playNext(payload));
     }
 
     async fetchMusics() {

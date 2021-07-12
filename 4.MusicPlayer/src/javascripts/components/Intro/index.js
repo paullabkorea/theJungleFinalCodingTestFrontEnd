@@ -1,3 +1,6 @@
+/**
+ * 최초 인트로 화면
+ */
 export default class Intro {
 
     constructor() {

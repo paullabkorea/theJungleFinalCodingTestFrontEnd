@@ -1,3 +1,6 @@
+/**
+ * 첫번째 페이지인 탑뮤직들을 담은 컴포넌트
+ */
 export default class TopMusics {
     constructor() {
         this.rootElement = TopMusics.createRootElement();
@@ -62,11 +65,17 @@ export default class TopMusics {
         });
     }
 
+    /**
+     * 재생 상태를 중단 (멈춤 아이콘 => 플레이 아이콘으로 전환: 재생상태를 멈춰서 다시 재생 버튼을 눌러야 하기 때문)
+     */
     renderStopAll() {
         const playingButtons = this.rootElement.querySelectorAll('.icon-pause');
         playingButtons.forEach(element => element.classList.replace('icon-pause', 'icon-play'));
     }
-
+    
+    /**
+     * 음악 재생을 app.js 에 요청
+     */
     requestPlay(target) {
         const controller = target.parentElement;
         const { index: musicIndex } = controller.dataset;
@@ -77,11 +86,19 @@ export default class TopMusics {
         target.classList.replace('icon-play', 'icon-pause');
     }
 
+    /**
+     * 음악 중단을 app.js 에 요청 
+     */
     requestPause(target) {
         this.emit('pause');
         target.classList.replace('icon-pause', 'icon-play');
     }
 
+    /**
+     * 플레이 리스트에 추가를 요청
+     * 여기는 검색과도 동일해서 나중에 기능을 묶을 수도 있을 듯함
+     * 하지만 여기서는 묶지 않겠음
+     */
     requestAddPlayList(target) {
         const controller = target.parentElement;
         const { index: musicIndex } = controller.dataset;
@@ -90,6 +107,7 @@ export default class TopMusics {
         this.emit('addPlayList', payload);
     }
 
+    // 받아온 음악 데이터를 넣기
     setMusics(musics = []) {
         this.musics = musics;
     }

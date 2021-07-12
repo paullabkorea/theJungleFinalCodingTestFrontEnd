@@ -1,5 +1,8 @@
 import { removeAllChildNodes } from '../../utils/index.js';
 
+/**
+ * 검색 컴포넌트
+ */
 export default class SearchView {
     constructor() {
         this.rootElement = SearchView.createRootElement();
@@ -24,11 +27,14 @@ export default class SearchView {
     }
     
     bindEvents() {
+
+        // 쿼리를 받아 즉시 검색하는 함수를 부모로 호출
         this.rootElement.querySelector('.search-input').addEventListener('input', (event) => {
             const query = event.target.value;
             this.emit('searchMusic', query);
         });
 
+        // 음악에 대한 기능 선택
         this.rootElement.addEventListener('click', (event) => {
             const { target } = event;
             const isControllerButton = target.tagName === 'BUTTON';
@@ -55,12 +61,14 @@ export default class SearchView {
         });
     }
 
+    // 모든 음악 재생 상태(멈춤 아이콘에서 플레이 아이콘으로 변환)를 중단
     renderStopAll() {
         const playingButtons = this.rootElement.querySelectorAll('.icon-pause');
         playingButtons.forEach(element => element.classList.replace('icon-pause', 'icon-play'));
     }
 
-    requestPlay(target) {
+    // 음악 재생을 App.js 에 요청
+    requestPlay(target0) {
         const controller = target.parentElement;
         const { index: musicIndex } = controller.dataset;
         const payload = { musics: this.searchedMusics, musicIndex };
@@ -70,11 +78,13 @@ export default class SearchView {
         target.classList.replace('icon-play', 'icon-pause');
     }
 
+    // 음악 중단을 app.js에 요청
     requestPause(target) {
         this.emit('pause');
         target.classList.replace('icon-pause', 'icon-play');
     }
 
+    // 플레이 리스트에 추가를 app.js 에 요청
     requestAddPlayList(target) {
         const controller = target.parentElement;
         const { index: musicIndex } = controller.dataset;
@@ -83,11 +93,13 @@ export default class SearchView {
         this.emit('addPlayList', payload);
     }
 
+    // 검색 결과를 담아 렌더링
     setSearchResult(musicList = []) {
         this.searchedMusics = musicList;
         this.renderSearchedMusics();
     }
 
+    // 다음 시간에는 Component 공통으로 묶고 상속 받을 예정
     on(eventName, callback) {
         this.events = this.events ? this.events : {};
         this.events[eventName] = callback;
@@ -97,6 +109,7 @@ export default class SearchView {
         this.events[eventName] && this.events[eventName](payload);
     }
 
+    // 음악 검색 결과 부분만 다시 렌더링
     renderSearchedMusics() {
         const musicListElement = this.rootElement.querySelector('.music-list');
         removeAllChildNodes(musicListElement);
@@ -130,6 +143,7 @@ export default class SearchView {
         musicListElement.innerHTML = searchedMusics;
     }
 
+    // 전체 렌더링을 보내줌
     render() {
         return this.rootElement;
     }

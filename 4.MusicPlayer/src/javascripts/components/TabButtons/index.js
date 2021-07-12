@@ -1,5 +1,8 @@
 import { findIndexListElement, getClosestElement } from '../../utils/index.js';
 
+/**
+ * 하단의 탭버튼 세가지를 담당하는 컴포넌트
+ */
 export default class TabButtons {
 
     constructor() {
