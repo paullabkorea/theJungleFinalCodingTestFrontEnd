@@ -1,0 +1,12 @@
+@charset "utf-8";
+#app{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.ir{
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+    line-height:0;
+    font-size: 1px;
+    color:transparent;
+}
