@@ -22,6 +22,7 @@ img {
 	right: 0;
 	background-color: var(--main-color);
 	z-index: 9000;
+	transition: all ease-out 1s;
 }
 
 .intro img {

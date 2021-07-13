@@ -88,8 +88,10 @@ export default class App {
 
     init() {
         this.intro.show();
-        this.render();
-        this.intro.hide();
+        setTimeout(() => {
+            this.render();
+            this.intro.hide();
+        }, 750);
     }
 
     renderMainView() {
