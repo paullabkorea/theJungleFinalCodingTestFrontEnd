@@ -99,7 +99,6 @@ export default class SearchView {
         this.renderSearchedMusics();
     }
 
-    // 다음 시간에는 Component 공통으로 묶고 상속 받을 예정
     on(eventName, callback) {
         this.events = this.events ? this.events : {};
         this.events[eventName] = callback;

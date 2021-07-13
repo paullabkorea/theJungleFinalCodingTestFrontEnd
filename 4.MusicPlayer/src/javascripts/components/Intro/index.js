@@ -24,6 +24,9 @@ export default class Intro {
     }
 
     hide() {
-        this.parentElement.removeChild(this.renderElement);
+        this.renderElement.style.opacity = 0;
+        setTimeout(() => {
+            this.parentElement.removeChild(this.renderElement);
+        }, 1000);
     }
 }
