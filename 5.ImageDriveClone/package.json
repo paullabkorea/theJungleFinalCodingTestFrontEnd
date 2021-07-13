@@ -1,0 +1,34 @@
+{
+  "name": "animal-album",
+  "version": "1.0.0",
+  "description": "animal album",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./APIs/index.js",
+    "emergency:kill": "kill -9 $(lsof -t -i:3000)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PracticeWareHouse/animal-album.git"
+  },
+  "keywords": [
+    "album"
+  ],
+  "author": "sherlock",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PracticeWareHouse/animal-album/issues"
+  },
+  "homepage": "https://github.com/PracticeWareHouse/animal-album#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lodash-id": "^0.14.0",
+    "lowdb": "^1.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  }
+}
