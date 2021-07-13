@@ -1,0 +1,348 @@
+
+    {
+        "questions": [
+            {
+                "pk": 1,
+                "content": "당신이 가장 재밌었던 수업은?"
+            },
+            {
+                "pk": 2,
+                "content": "여러분의 서비스가 성공하였다면, 서비스를 성공시킨 요소는?"
+            },
+            {
+                "pk": 3,
+                "content": "오류가 생겼습니다. 모두의 중요도가 동일하다고 할 때 당신이 먼저 처리할 오류는?"
+            },
+            {
+                "pk": 4,
+                "content": "당신이 만약 웹 서비스를 만들었을 때, 가장 듣기 좋을 것 같은 칭찬은?"
+            },
+            {
+                "pk": 5,
+                "content": "당신은 영양제를 구입하려고 합니다. 당신이 가장 먼저 고려할 것은?"
+            },
+            {
+                "pk": 6,
+                "content": "당신은 망해가는 빵집을 인수했습니다. 당신이 가장 먼저 시작할 일은?"
+            },
+            {
+                "pk": 7,
+                "content": "당신은 친구에게 크리스마스 스웨터를 선물해 주기로 했습니다. 당신의 선택은?"
+            },
+            {
+                "pk": 8,
+                "content": "당신은 음료 회사의 잘나가는 직원으로, 사장님이 당신에게 신메뉴 개발을 일임하겠다고 합니다. 당신의 음료 개발 방법은?"
+            },
+            {
+                "pk": 9,
+                "content": "당신은 바다에 놀러왔습니다. 성공적인 여행을 위해 가장 먼저 해야할 것은?"
+            },
+            {
+                "pk": 10,
+                "content": "당신은 친구의 집들이에 가려고 합니다. 당신이 선택한 선물은?"
+            }
+        ],
+
+        "answers": [
+            {
+                "pk": 1,
+                "content": "게임 개발(유니티, 언리얼, Pygame)",
+                "developer": 5,
+                "question": 1
+            },
+            {
+                "pk": 2,
+                "content": "백엔드 또는 인프라(C계열-닷넷, JAVA-Spring, Python-Django, Network, Ubuntu, CentOS, 부하분산, etc)",
+                "developer": 1,
+                "question": 1
+            },
+            {
+                "pk": 3,
+                "content": "정보보안(해킹과 방어)",
+                "developer": 4,
+                "question": 1
+            },
+            {
+                "pk": 4,
+                "content": "프론트엔드(HTML, CSS, Javascript, etc)",
+                "developer": 2,
+                "question": 1
+            },
+            {
+                "pk": 5,
+                "content": "데이터 분석과 인공지능(전처리, 분석, 시각화, 머신러닝, 딥러닝)",
+                "developer": 3,
+                "question": 1
+            },
+            {
+                "pk": 6,
+                "content": "데이터 분석을 통한 효과적인 개인 맞춤형 서비스",
+                "developer": 3,
+                "question": 2
+            },
+            {
+                "pk": 7,
+                "content": "화려하거나 품격있는 디자인, 흥미로운 콘텐츠 제작",
+                "developer": 2,
+                "question": 2
+            },
+            {
+                "pk": 8,
+                "content": "게임적인(Gamification, 게이미피케이션) 요소 도입",
+                "developer": 5,
+                "question": 2
+            },
+            {
+                "pk": 9,
+                "content": "안정적인 서비스 운용",
+                "developer": 1,
+                "question": 2
+            },
+            {
+                "pk": 10,
+                "content": "믿을 수 있는 정보 관리",
+                "developer": 4,
+                "question": 2
+            },
+            {
+                "pk": 11,
+                "content": "서브 페이지 화면 로딩 시간이 딜레이되는 현상",
+                "developer": 1,
+                "question": 3
+            },
+            {
+                "pk": 12,
+                "content": "데이터 분석을 통한 맞춤형 광고 서비스 오류",
+                "developer": 3,
+                "question": 3
+            },
+            {
+                "pk": 13,
+                "content": "홈페이지 화면의 뒤틀린 이미지, 폰트 깨짐 현상",
+                "developer": 2,
+                "question": 3
+            },
+            {
+                "pk": 14,
+                "content": "(개인정보 보호법에는 저촉되지 않지만) 민감 정보가 노출되는 현상",
+                "developer": 4,
+                "question": 3
+            },
+            {
+                "pk": 15,
+                "content": "오류가 발생했을 때 할 수 있는 게임",
+                "developer": 5,
+                "question": 3
+            },
+            {
+                "pk": 16,
+                "content": "개발자 친구 : \"네가 만든 사이트 진짜 예쁘다!\"",
+                "developer": 2,
+                "question": 4
+            },
+            {
+                "pk": 17,
+                "content": "개발자 친구 : \"동시 접속이 1천명인데 이렇게 빠르다고?\" 또는 \"SNS 로그인이 다 들어가 있네, 난 요즘 이런게 편하더라.\"",
+                "developer": 1,
+                "question": 4
+            },
+            {
+                "pk": 18,
+                "content": "해커 친구 : \"보안 취약점이 없는 완벽한 시큐어코딩이야. 너의 사이트는 완벽해.\"",
+                "developer": 4,
+                "question": 4
+            },
+            {
+                "pk": 19,
+                "content": "개발자 친구 : \"서비스를 해보니 내가 원하는 광고가 딱! 나오니까 너무 좋더라!\"",
+                "developer": 3,
+                "question": 4
+            },
+            {
+                "pk": 20,
+                "content": "게이머 친구 : \"사이트에 있는 그 게임 때문에, 2박 3일동안 잠도 자지 못했어.\"",
+                "developer": 5,
+                "question": 4
+            },
+            {
+                "pk": 21,
+                "content": "일단 효과가 좋은걸 사자! 고농축 영양제 구매",
+                "developer": 1,
+                "question": 5
+            },
+            {
+                "pk": 22,
+                "content": "화려한 상품 상세 페이지가 내 눈을 사로잡는다. 이걸로 사야지!",
+                "developer": 2,
+                "question": 5
+            },
+            {
+                "pk": 23,
+                "content": "동일한 영양제 함량을 제조사별로 비교해 봐야지",
+                "developer": 3,
+                "question": 5
+            },
+            {
+                "pk": 24,
+                "content": "믿을 수 있는 영양제가 맞나? 꼼꼼하게 따져봐야겠어",
+                "developer": 4,
+                "question": 5
+            },
+            {
+                "pk": 25,
+                "content": "맛없으면 결국 안 먹어! 젤리로 된 제품은 없나?",
+                "developer": 5,
+                "question": 5
+            },
+            {
+                "pk": 26,
+                "content": "\"어떤 빵이 제일 잘 나갈까?\" 수요를 조사해서 새로운 메뉴 만들기",
+                "developer": 3,
+                "question": 6
+            },
+            {
+                "pk": 27,
+                "content": "\"빵집은 빵이 맛있어야지!\" 효율이 좋은 새 오븐 사기",
+                "developer": 1,
+                "question": 6
+            },
+            {
+                "pk": 28,
+                "content": "\"일단 이벤트를 통해 손님을 모아야 해!\" 파격 세일 이벤트 등 새로운 이벤트 만들기",
+                "developer": 5,
+                "question": 6
+            },
+            {
+                "pk": 29,
+                "content": "\"요즘은 레트로 갬성이지~\" 유행이 다시 돌아온 90년대 간판 설치하기",
+                "developer": 2,
+                "question": 6
+            },
+            {
+                "pk": 30,
+                "content": "\"음식을 파는 곳은 당연히 깨끗해야지!\" 위생과 안전을 위해 세X코, 캡X 등록하기",
+                "developer": 4,
+                "question": 6
+            },
+            {
+                "pk": 31,
+                "content": "난 내 눈을 믿는다 너한테 가장 잘 어울리는 옷은 내가 알아!",
+                "developer": 2,
+                "question": 7
+            },
+            {
+                "pk": 32,
+                "content": "겨울옷은 따뜻해야지~ 기능 중시! 이번 겨울 최고 한파래",
+                "developer": 1,
+                "question": 7
+            },
+            {
+                "pk": 33,
+                "content": "두뇌 풀가동! 지금까지 친구가 입었던 니트류 옷을 알아낸다. 네가 마음에 들어하는 옷은 이미 내 뇌 속에 있다!",
+                "developer": 3,
+                "question": 7
+            },
+            {
+                "pk": 34,
+                "content": "알러지가 생길 수 있으니 꼼꼼하게 성분 표시를 읽고 알러지 프리 제품을 사줘야지!",
+                "developer": 4,
+                "question": 7
+            },
+            {
+                "pk": 35,
+                "content": "잊지 못할 재미있는 선물을 줘야지! 반짝이는 전구 달린 어글리 스웨터",
+                "developer": 5,
+                "question": 7
+            },
+            {
+                "pk": 36,
+                "content": "손님들의 눈길을 확 끌어보자! 요즘 유행하는 화려한 디자인으로 포장한 음료!",
+                "developer": 2,
+                "question": 8
+            },
+            {
+                "pk": 37,
+                "content": "고객신뢰가 최우선! 프랜차이즈 매장마다 레시피가 다르면 안 되니까 정확한 용량과 제조법은 필수!",
+                "developer": 1,
+                "question": 8
+            },
+            {
+                "pk": 38,
+                "content": "인기 많은 음료 싹 가지고 와! 왜 인기가 있었는지, 인기 요인을 찾아보자!",
+                "developer": 3,
+                "question": 8
+            },
+            {
+                "pk": 39,
+                "content": "요즘은 홍보로 반은 먹고 들어가지! SNS 첼린지 이벤트로 사람들의 관심을 끌자!",
+                "developer": 5,
+                "question": 8
+            },
+            {
+                "pk": 40,
+                "content": "레시피를 만드는 것도 중요하지만, 우리만의 독자적인 레시피가 새어나가지 않게 조심해야 해!",
+                "developer": 4,
+                "question": 8
+            },
+            {
+                "pk": 41,
+                "content": "일단 파라솔이랑 음식 세팅! 사진 잘 찍어서 SNS에 여행 온 거 자랑해야지!",
+                "developer": 2,
+                "question": 9
+            },
+            {
+                "pk": 42,
+                "content": "여행 왔는데 짐을 잃어버리면 낭패지! 락커룸이 어디 있는지 찾아보자!",
+                "developer": 4,
+                "question": 9
+            },
+            {
+                "pk": 43,
+                "content": "준비물은 다 챙겨왔지? 빠뜨린 거 없는지 다시 확인하자!",
+                "developer": 1,
+                "question": 9
+            },
+            {
+                "pk": 44,
+                "content": "이왕 온 거 유명한 건 다 해 봐야지! 근처에 어떤 맛집이 있는지 알아보자!",
+                "developer": 3,
+                "question": 9
+            },
+            {
+                "pk": 45,
+                "content": "그냥 노는 건 재미없잖아? 비치볼 게임 하면서 놀자!",
+                "developer": 5,
+                "question": 9
+            },
+            {
+                "pk": 46,
+                "content": "집 꾸미기에 도움이 되는 예쁜 인테리어 소품을 골라볼까?",
+                "developer": 2,
+                "question": 10
+            },
+            {
+                "pk": 47,
+                "content": "실용성이 갑이지! 화장지랑 수건 세트랑...",
+                "developer": 1,
+                "question": 10
+            },
+            {
+                "pk": 48,
+                "content": "음... 우선 센스있는 집들이 선물 먼저 검색해봐야지!",
+                "developer": 5,
+                "question": 10
+            },
+            {
+                "pk": 49,
+                "content": "집들이 가서 뭐하겠어! 보드 게임이나 사 가자!",
+                "developer": 5,
+                "question": 10
+            },
+            {
+                "pk": 50,
+                "content": "역시 집은 안전이 최고!! 현관문 보안장치 사줘야겠다.",
+                "developer": 4,
+                "question": 10
+            }
+        ]
+    }

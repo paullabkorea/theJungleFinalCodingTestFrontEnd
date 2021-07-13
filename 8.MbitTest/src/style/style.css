@@ -1,0 +1,187 @@
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 98px auto 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+  background: #f7f1c0;
+  height: 100%;
+}
+
+button,
+a {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-container h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 55px;
+  font-weight: 700;
+  font-family: "GmarketSansBold";
+}
+
+.intro-container span {
+  color: #9b51e0;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 36px;
+}
+
+.intro-container strong {
+  margin-bottom: 36px;
+  font-weight: 700;
+}
+
+.intro-container img {
+  width: 270px;
+  height: 267px;
+  display: block;
+  margin-bottom: 36px;
+}
+
+.intro-container button {
+  width: 300px;
+  height: 52px;
+  background: #ffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 16px;
+  color: #9b51e0;
+  font-weight: 900;
+}
+
+.loading-container {
+  position: absolute;
+  top: 326px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.loading-container img {
+  width: 91px;
+  height: 88px;
+}
+
+.loading-container p {
+  font-size: 14px;
+}
+
+.question-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.status-box {
+  width: 300px;
+  height: 6px;
+  background: #ffff;
+  position: relative;
+}
+
+.status {
+  width: 10%;
+  height: 6px;
+  background: #9b51e0;
+}
+
+.status-box span {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  color: #9b51e0;
+  font-size: 18px;
+}
+
+.question-container {
+  display: none;
+}
+
+.question-container.on {
+  display: block;
+}
+
+.question-box h2 {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 40px 0px 30px 0px;
+}
+
+.question-box .answer-list {
+  margin-bottom: 36px;
+}
+
+.question-box .answer-item {
+  font-size: 16px;
+  line-height: 23px;
+  list-style: none;
+  margin-bottom: 12px;
+  text-indent: -22px;
+  margin: 0 0 12px 22px;
+
+}
+
+.button-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-box:first-child, .button-box:last-child {
+  justify-content: center;
+}
+
+.question-container button {
+  background: #9b51e0;
+  font-weight: 900;
+  font-size: 16px;
+  color: #ffff;
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 380px) {
+  body {
+    margin-top: 56px;
+  }
+
+  .loading-container {
+    top: 266px;
+  }
+
+  .loading-container p {
+    font-size: 12px;
+  }
+}
