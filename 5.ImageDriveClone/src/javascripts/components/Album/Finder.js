@@ -23,17 +23,19 @@ class Finder extends Component {
         return nodesWrapper;
     }
 
-    // 파인더에서 클릭했을 때 발생하는 이벤트를 바인딩해줍니다.
+    // 파인더에서 클릭했을 때 발생하는 이벤트를 바인딩해줍니다. 이벤트 위임을 활용했습니다.
     bindEvents() {
+        // 렌더 엘리먼트를 클릭했을 때
         this.renderElement.addEventListener("click", async (event) => {
+            // li 에 데이터를 넣어뒀으므로 상위의 li를 찾습니다.
             const targetElement = getClosestElement(event.target, 'li');
             if (!targetElement) {
               return;
             }
-            
+            // 폴더인지 파일인지와 id 값을 가져옵니다.
             const type = targetElement.dataset.type;
             const nodeID = targetElement.dataset.id;
-      
+            // 타입에 따라 부모에게 이벤트 호출을 합니다.
             switch(type) {
               case "DIRECTORY": {
                   this.emit('onNextDirectory', nodeID);
@@ -47,10 +49,12 @@ class Finder extends Component {
           });
     }
   
+    // 부모로부터 데이터를 받아옵니다.
     set(nodes = []) {
         this.nodes = nodes;
     }
   
+    // 가진 데이터로 렌더링을 합니다.
     render() {
         const nodesElements = this.nodes.map((node) => {
             const isDirectory = node.type === "DIRECTORY";

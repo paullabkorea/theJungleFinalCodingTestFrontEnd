@@ -33,6 +33,7 @@ class ImageViewer {
   
     // 이미지 뷰어를 여는 함수입니다.
     open(filePath = "") {
+      // 받아온 파일 경로를 src에 넣어줍니다.
       this.renderElement.querySelector('img').src = filePath;
       this.parentElement.appendChild(this.renderElement);
     }
