@@ -45,14 +45,16 @@ ol {
   margin: 0;
 }
 
+/* 인트로 페이지 스타일 */
+/* 인트로 컨테이너 스타일 */
 .intro-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+/* 제목 스타일 */
 .intro-container h1 {
-  margin-top: 0;
   margin-bottom: 10px;
   font-size: 55px;
   font-weight: 700;
@@ -68,6 +70,7 @@ ol {
 
 .intro-container strong {
   margin-bottom: 36px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -87,23 +90,6 @@ ol {
   font-size: 16px;
   color: #9b51e0;
   font-weight: 900;
-}
-
-.loading-container {
-  position: absolute;
-  top: 326px;
-  left: 50%;
-  text-align: center;
-  transform: translateX(-50%);
-}
-
-.loading-container img {
-  width: 91px;
-  height: 88px;
-}
-
-.loading-container p {
-  font-size: 14px;
 }
 
 /* 문항 선택 페이지 */
@@ -192,11 +178,37 @@ ol {
   justify-content: center; 
 }
 
+/* 로딩 스타일 */
+/* 결과가 나오기 전 표시 */
+.loading-container {
+  display: block;
+  position: absolute;
+  top: 326px;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.loading-container img {
+  width: 91px;
+  height: 88px;
+  margin-bottom: 24px; 
+}
+
+.loading-container p {
+  font-size: 14px;
+}
+
 /* 결과페이지 스타일 */
 /* 결과 컨테이너 스타일 */
 .result-container {
+  display: none;
   width: 300px;
   margin: 0 auto;
+}
+
+.result-wrap {
+  margin-bottom: 36px;
 }
 
 .result-title {
@@ -224,10 +236,10 @@ ol {
 }
 
 .result-features {
-  margin: 8px 0 36px;
+  margin-top: 8px;
 }
 
-.result-features .features-title {
+.result-features h3 {
   font-weight: bold;
   font-size: 16px;
   text-align: center;
@@ -238,7 +250,10 @@ ol {
 }
 
 .result-features li {
-  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 23px;
+  margin: 0 0 12px 12px;
+  text-indent: -6px;
 }
 
 .result-features li::before {
@@ -247,7 +262,6 @@ ol {
   font-weight: bold;
   display: inline-block;
   width: 6px;
-  margin-right: 6px;
 }
 
 .result-container button {

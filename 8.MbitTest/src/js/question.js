@@ -1,13 +1,15 @@
 const form = document.querySelector("#question-form");
 
-// data.json 파일 읽기
+// data.json 데이터 받기
 function loadQuestionData(){
     fetch("../data/data.json")
       .then((response) => response.json())
       .then(data => {
+        // 질문과 답안 데이터 저장
         const questions = data.questions;
         const answers = data.answers;
 
+        // 문항 배열을 순환하며 문항 번호와 맞는 각 답안들을 답안 배열에 저장
         questions.forEach(question => {
             let questionNumber = question.pk;
             let answerArr = [];
@@ -22,6 +24,7 @@ function loadQuestionData(){
         });
 
         // 첫번째 문항에 class "on" 추가
+        // 항상 현재 보여지고 있는 문항에 on을 추가합니다.
         const questionItem = document.querySelectorAll(".question-item");
         const firstQuestionItem = questionItem[0];
 
@@ -32,9 +35,12 @@ function loadQuestionData(){
         const firstButtonBox = buttonBoxes[0];
         const lastButtonBox = buttonBoxes[buttonBoxes.length - 1];
 
+        // 첫번째 문항에는 이전 버튼이 필요없기 때문에 다음 버튼만 배치
+        // 버튼 가운데 정렬
         firstButtonBox.innerHTML = "<button type='button' class='next-btn'>다음</button>";
         firstButtonBox.classList.add("style-center");
 
+        // 마지막 문항에는 다음 버튼 대신 제출 버튼 추가
         lastButtonBox.innerHTML = `<button type='button' class='previous-btn'>이전</button><button type='button' class='submit-btn'>제출</button>`;
 
         // 버튼에 클릭 이벤트 추가
@@ -60,15 +66,13 @@ function loadQuestionData(){
 
         statusBar.forEach((e, i) => {
             e.style.width = `${(Number(i)+1)*10}%`;
-        })
+        });
 
-        // 제출 버튼
+        // 제출 버튼 - 버튼을 클릭하면 form 제출
         const submitButton = document.querySelector(".submit-btn");
 
         submitButton.addEventListener("click", function(){
             form.submit();
-
-            // location.href = '/result';
 
             return false;
         });
@@ -139,5 +143,3 @@ function movePrev(currentItem){
         prev.classList.add("on");
     }
 }
-
-// 제출 버튼 이벤트
