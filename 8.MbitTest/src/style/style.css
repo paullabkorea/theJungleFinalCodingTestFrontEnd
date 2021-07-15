@@ -20,7 +20,6 @@
 }
 
 body {
-  padding: 0;
   margin: 98px auto 0;
   box-sizing: border-box;
   font-family: "Noto Sans KR", sans-serif;
@@ -37,12 +36,6 @@ button {
   border: none;
   padding: 0;
   cursor: pointer;
-}
-
-ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 /* 인트로 페이지 스타일 */
@@ -100,7 +93,10 @@ ol {
 }
 
 /* 문항 스타일 */
-/* on이 붙으면 block */
+/*
+첫번째 문항은 on이 붙어있습니다.
+문항은 이전, 다음 버튼을 누를 때 클래스 on을 추가하거나 지우면서 스타일을 변경합니다.
+*/
 .question-item {
   display: none;
   width: 100%;
@@ -174,6 +170,7 @@ ol {
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* 버튼이 하나일 경우 가운데 정렬 */
 .button-box.style-center {
   justify-content: center; 
 }
@@ -211,12 +208,14 @@ ol {
   margin-bottom: 36px;
 }
 
+/* 결과 문구 */
 .result-title {
   font-size: 14px;
   margin-bottom: 10px;
   text-align: center;
 }
 
+/* 결과 이름 */
 .result-name {
   font-weight: 900;
   font-size: 36px;
@@ -224,6 +223,7 @@ ol {
   color: #9b51e0;
 }
 
+/* 결과 이미지 */
 .result-image {
   width: 228px;
   height: 241px;
@@ -235,6 +235,7 @@ ol {
   height: auto;
 }
 
+/* 결과 특징 */
 .result-features {
   margin-top: 8px;
 }

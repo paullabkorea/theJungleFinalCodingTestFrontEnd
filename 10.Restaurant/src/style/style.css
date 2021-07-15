@@ -17,6 +17,17 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+button,
+a {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 #app {
     display: flex;
     justify-content: center;
@@ -254,7 +265,6 @@ body {
     height: 44px;
     color: #FFF;
     font-size: 16px;
-    border: none;
 }
 
 /* 레스토랑 예약 테이블 스타일 */
@@ -350,7 +360,5 @@ tbody에 max-height를 줘서 overflow 경우 스크롤이 생기게 합니다.
     height: 44px;
     color: #FFF;
     font-size: 16px;
-    border: none;
-    cursor: pointer;
     bottom: 0;
 }
