@@ -1,0 +1,167 @@
+@charset "utf-8";
+@import "reset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+body {
+  margin-top: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+/* 레스토랑 컨테이너 스타일 */
+.restaurant-container {
+    width: 766px;
+    height: 700px;
+    margin-right: 31px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    border: 2px solid #BDBDBD;
+}
+
+/* 레스토랑 예약 컨테이너 스타일 */
+.reservation-container {
+    position: relative;
+}
+
+.reservation-count {
+    margin-bottom: 24px;
+}
+
+.reservation-count label {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.reservation-count input {
+    display: inline-block;
+    font-size: 16px;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    text-align: right;
+    padding: 0 14px;
+    width: 270px;
+    height: 42px;
+    margin-right: 14px;
+}
+
+.reservation-count input::placeholder {
+    color: #BDBDBD;
+}
+
+.reservation-count button {
+    display: inline-block;
+    background-color: #2F80ED;
+    border-radius: 10px;
+    width: 86px;
+    height: 44px;
+    color: #FFF;
+    font-size: 16px;
+    border: none;
+}
+
+.quests {
+    margin-bottom: 20px;
+}
+
+.quests-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.reservation-table {
+    background-color: #f8f8f8;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table thead {
+    display: block;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table th {
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table th, .reservation-table td {
+    padding: 3px 0 4px;
+    border-right: 1px solid #bdbdbd;
+}
+
+.reservation-table th:nth-child(1), .reservation-table td:nth-child(1) {
+    width: 178px;
+}
+
+.reservation-table th:nth-child(2), .reservation-table td:nth-child(2) {
+    width: 110px;
+}
+
+.reservation-table th:nth-child(3), .reservation-table td:nth-child(3) {
+    width: 108px;
+    border-right: none;
+}
+
+.reservation-table tbody tr {
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table tbody tr:last-child {
+    border: none;
+}
+
+.reservation-table td {
+    font-size: 16px;
+    text-align: center;
+}
+
+.reservation-table th:nth-child(2), .reservation-table td:nth-child(2) {
+    background-color: #FFF;
+}
+
+.reservation-table tbody {
+    display: block;
+    max-height: 482px;
+    overflow-y: scroll;
+}
+
+.reject {
+    color: #EB5757;
+}
+
+.waiting {
+    font-size: 16px;
+    color: #2F80ED;
+}
+
+.start-btn {
+    position: absolute;
+    background-color: #2F80ED;
+    border-radius: 10px;
+    width: 400px;
+    height: 44px;
+    color: #FFF;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    bottom: 0;
+}

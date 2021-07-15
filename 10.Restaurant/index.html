@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style/style.css">
+  <title>레스토랑 예약</title>
+</head>
+<body>
+    <div id="app">
+        <section class="restaurant-container">
+            <h3 class="sr-only">레스토랑 테이블</h3>
+        </section>
+        <section class="reservation-container">
+            <h3 class="sr-only">레스토랑 예약 시스템</h3>
+            <div class="reservation-count">
+                <form action="">
+                    <label for="">식사 인원</label>
+                    <input type="text" placeholder="숫자 입력">
+                    <button type="submit">예약</button>
+                </form>
+            </div>
+            <div class="quests">
+                <div class="quests-title">Restaurant Guests</div>
+                <table class="reservation-table">
+                    <thead>
+                        <tr>
+                            <th>예약 번호</th>
+                            <th>인원</th>
+                            <th>현재 상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>식사 중</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>식사 중</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>5</td>
+                            <td class="reject">거절</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>10</td>
+                            <td class="reject">거절</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>3</td>
+                            <td class="waiting">대기 중</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>2</td>
+                            <td class="waiting">대기 중</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="start-btn">영업 개시</button>
+        </section>
+    </div>
+    
+</body>
+</html>
