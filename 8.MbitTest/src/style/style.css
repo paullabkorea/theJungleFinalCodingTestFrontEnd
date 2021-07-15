@@ -279,12 +279,50 @@ ol {
   body {
     margin-top: 56px;
   }
+  
+  /* 인트로 페이지 스타일 */
+  .intro-container h1 {
+    font-size: 45px;
+  }
 
+  .intro-container span {
+    font-size: 14px;
+  }
+
+  /* 문항 선택 페이지 */
+  .question-box h2 {
+    font-size: 16px;
+  }
+
+  .question-box .answer-list {
+    margin-bottom: 36px;
+  }
+
+  .question-box .answer-item {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  /* 로딩 스타일 */
   .loading-container {
     top: 266px;
   }
 
   .loading-container p {
     font-size: 12px;
+  }
+
+  /* 결과페이지 스타일 */
+  .result-wrap {
+    margin-bottom: 30px;
+  }
+
+  .result-features h3 {
+    margin-bottom: 20px;
+  }
+
+  .result-features li {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
