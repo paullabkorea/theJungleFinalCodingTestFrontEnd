@@ -1,3 +1,4 @@
+@charset "utf-8";
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
 
@@ -7,6 +8,15 @@
     format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
 }
 
 body {
@@ -96,22 +106,28 @@ ol {
   font-size: 14px;
 }
 
-.question-container {
+/* 문항 선택 페이지 */
+/* form 스타일 */
+#question-form {
   width: 300px;
   margin: 0 auto;
 }
 
-.status-box {
-  width: 300px;
-  height: 6px;
-  background: #ffff;
-  position: relative;
+/* 문항 스타일 */
+/* on이 붙으면 block */
+.question-item {
+  display: none;
+  width: 100%;
 }
 
-.status {
-  width: 10%;
-  height: 6px;
-  background: #9b51e0;
+.question-item.on {
+  display: block;
+}
+
+/* 상태바 스타일 */
+.status-box {
+  background: #ffff;
+  position: relative;
 }
 
 .status-box span {
@@ -123,14 +139,12 @@ ol {
   font-size: 18px;
 }
 
-.question-container {
-  display: none;
+.status-bar {
+  height: 6px;
+  background: #9b51e0;
 }
 
-.question-container.on {
-  display: block;
-}
-
+/* 문제 스타일 */
 .question-box h2 {
   font-weight: 900;
   font-size: 18px;
@@ -138,6 +152,7 @@ ol {
   margin: 40px 0px 30px 0px;
 }
 
+/* 답안 스타일 */
 .question-box .answer-list {
   margin-bottom: 36px;
 }
@@ -149,27 +164,101 @@ ol {
   margin-bottom: 12px;
   text-indent: -22px;
   margin: 0 0 12px 22px;
-
 }
 
+.question-box input, .question-box label {
+  cursor: pointer;
+}
+
+/* 이전, 다음 버튼 스타일 */
 .button-box {
   display: flex;
   justify-content: space-between;
+  width: 300px;
 }
 
-.button-box:first-child, .button-box:last-child {
-  justify-content: center;
-}
-
-.question-container button {
+.button-box button {
+  width: 100px;
+  height: 40px;
   background: #9b51e0;
   font-weight: 900;
   font-size: 16px;
   color: #ffff;
   border-radius: 10px;
-  width: 100px;
-  height: 40px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-box.style-center {
+  justify-content: center; 
+}
+
+/* 결과페이지 스타일 */
+/* 결과 컨테이너 스타일 */
+.result-container {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.result-title {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.result-name {
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  color: #9b51e0;
+}
+
+.result-image {
+  width: 228px;
+  height: 241px;
+  margin: 0 auto;
+}
+
+.result-image > img {
+  width: 100%;
+  height: auto;
+}
+
+.result-features {
+  margin: 8px 0 36px;
+}
+
+.result-features .features-title {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  padding: 8px 0;
+  border-top: 2px solid #9b51e0;
+  border-bottom: 2px solid #9b51e0;
+  margin-bottom: 22px;
+}
+
+.result-features li {
+  margin-bottom: 12px;
+}
+
+.result-features li::before {
+  content: "\2022";
+  color: #9b51e0;
+  font-weight: bold;
+  display: inline-block;
+  width: 6px;
+  margin-right: 6px;
+}
+
+.result-container button {
+  width: 100%;
+  height: 52px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 16px;
+  color: #9B51E0;
 }
 
 @media screen and (max-width: 380px) {
