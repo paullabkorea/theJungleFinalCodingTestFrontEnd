@@ -1,0 +1,120 @@
+@import 'reset.css';
+body{
+    background-color: #6FCF97;
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    margin-bottom: 30px;
+}
+.wrapper{
+    width: 330px;
+    margin: auto;
+
+    color: #ffffff;
+}
+.counter{
+    width: 100%;
+    margin: 6px 0px;
+    display: flex;
+    align-items: flex-end;
+}
+.counter>b{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    width: 44px;
+}
+.counter>span{
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    
+}
+.puzzle{
+    display: flex;
+    flex-wrap: wrap;
+}
+.peace_container{
+    width: 70px;
+    height: 75px;
+    margin: 5px 5px 0px 5px;
+    border-radius: 18px;
+    background-color: #20A156;
+
+}
+.peace{
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    color: #20A156;
+    border-radius: 18px;
+    
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: transform 500ms;
+}
+.void{
+    width: 70px;
+    height: 70px;
+    
+}
+.button{
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 23px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.start_button{
+    margin-top: 50px;
+    color: #6FCF97;
+    background-color: #ffffff;
+}
+.reset_button{
+    color: #ffffff;
+    margin-top: 14px;
+    border: 2px solid #FFFFFF;
+}
+
+.answer{
+    display: none;
+    position: absolute;
+    background-color: #539e72;
+    top: 200px;
+    border-radius: 18px;
+    width: 320px;
+}
+
+.answer_con{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 23px;
+    font-family: Noto Sans KR;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.answer_button {
+    margin-top: 10px;
+    cursor: pointer;
+}
