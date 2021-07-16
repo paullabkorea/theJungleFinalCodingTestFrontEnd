@@ -248,3 +248,23 @@ body{
     font-size: 12px;
     margin-top:10px;
 }
+
+@media only screen 
+  and (min-device-width: 320px) /*기기의 넓이가 320 이상*/
+  and (max-device-width: 480px) /*기기의 넓이가 420 이하*/
+  and (-webkit-min-device-pixel-ratio: 2) { /* 최소 1px 당 2개의 화소 */
+    body{
+        background-color: #fff;
+    }
+    #app{
+        padding-top:65px;
+    }
+    #app .tit-app{
+        width:166px;
+        height: 70px;
+    }
+    .my-info .cont-myitems{
+        margin-top:0;
+        padding: 31px 27px 32px;
+    }
+}
