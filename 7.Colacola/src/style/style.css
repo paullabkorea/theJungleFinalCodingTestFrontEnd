@@ -63,7 +63,7 @@ body{
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5); /* 세번째 값은 블러 처리만 */
 }
-.vending-machine .list-item li.on::before{
+.vending-machine .list-item li:active::before{
     display: block;
     position: absolute;
     content:'';
@@ -83,9 +83,14 @@ body{
     height:100%;
     top:0;
     left:0;
+    z-index: 1;
     border-radius: 10px;
-    background:no-repeat center/60px 46px url(/src/images/Sold-out.png) rgba(0, 0, 0, 0.8);;
+    background:no-repeat center/60px 46px url(/src/images/Sold-out.png) rgba(0, 0, 0, 0.8);
 }
+.vending-machine .list-item li.sold-out{
+    pointer-events: none;
+}
+
 .vending-machine .list-item li:nth-child(3)~li{ /* 세번째 자식요소의 다음 모든 형제 요소들 */
     margin-top:12px;
 }
@@ -164,6 +169,9 @@ body{
 }
 .list-item-staged li+li{
     margin-top:6px;
+}
+.list-item-staged .btn-staged{
+    width:100%;
 }
 .list-item-staged .img-item, .list-item-staged .txt-item{
     float:left;
