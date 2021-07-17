@@ -1,0 +1,364 @@
+@charset "utf-8";
+@import "reset.css";
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+.sr-only {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+body {
+  margin-top: 100px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+button,
+a {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+button {
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+#app {
+    display: flex;
+    justify-content: center;
+}
+
+/* 레스토랑 컨테이너 스타일 */
+.restaurant-container {
+    position: relative;
+    width: 766px;
+    height: 700px;
+    margin-right: 31px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    border: 2px solid #BDBDBD;
+    overflow: hidden;
+}
+
+/* 현재 영업 시간 */
+.current-time {
+    position: absolute;
+    top: 23px;
+    left: 26px;
+    z-index: 1;
+}
+
+.current-time .title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.current-time .time {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+/* 스테이지 스타일 */
+.stage {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.stage img {
+    width: 303px;
+    height: 291px;
+}
+
+/* Bar 테이블 스타일 */
+.bar-table {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.bar-table img {
+    width: 474px;
+    height: 123px;
+}
+
+/* 모든 테이블 공통 의자 스타일 */
+.chair-item {
+    width: 13px;
+    height: 13px;
+    border: 3px solid #BDBDBD;
+    background-color: #FFF;
+    border-radius: 50%;
+}
+
+/* 손님이 의자에 앉으면 빨간 불 - 클래스에 on 추가(모든 테이블 공통) */
+.chair-item.on {
+    background-color: #EB5757;
+}
+
+/* bar 테이블 - 의자 스타일 */
+.bar-table .chairs {
+    position: absolute;
+    bottom: -41px;
+    left: 70px;
+}
+
+.bar-table .chairs .chair-item {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+/* 2인 테이블(사각형) */
+.rec-table {
+    position: absolute;
+    width: 80px;
+    height: 42px;
+    border-radius: 5px;
+    background-color: #C4C4C4;
+}
+
+.rec-table.table-1 {
+    top: 146px;
+    left: 348px;
+}
+
+.rec-table.table-2 {
+    top: 228px;
+    left: 458px;
+    transform: rotate(44.24deg);
+}
+
+.rec-table.table-3 {
+    top: 309px;
+    left: 610px;
+    transform: rotate(8.1deg);
+}
+
+/* 2인 테이블 - 의자 스타일 */
+.rec-table .chairs {
+    position: relative;
+    height: 100%;
+}
+
+.rec-table .chair-item {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.rec-table .chair-item:nth-child(1) {
+    left: -27px;
+}
+
+.rec-table .chair-item:nth-child(2) {
+    right: -27px;
+}
+
+/* 4인 테이블(원) */
+.circle-table {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #BDBDBD;
+}
+
+.circle-table.table-1 {
+    top: 335px;
+    left: 81px;
+}
+
+.circle-table.table-2 {
+    top: 335px;
+    left: 277px;
+}
+
+.circle-table.table-3 {
+    top: 531px;
+    left: 81px;
+}
+
+.circle-table.table-4 {
+    top: 531px;
+    left: 277px;
+}
+
+.circle-table.table-5 {
+    top: 531px;
+    left: 575px;
+}
+
+/* 4인 테이블 - 의자 스타일 */
+.circle-table .chairs {
+    position: relative;
+    height: 100%;
+}
+
+.circle-table .chair-item {
+    position: absolute;
+}
+
+.circle-table .chair-item:nth-child(1) {
+    top: -9.5px;
+    left: -9.5px;
+}
+
+.circle-table .chair-item:nth-child(2) {
+    top: -9.5px;
+    right: -9.5px;
+}
+
+.circle-table .chair-item:nth-child(3) {
+    bottom: -9.5px;
+    left: -9.5px;
+}
+
+.circle-table .chair-item:nth-child(4) {
+    bottom: -9.5px;
+    right: -9.5px;
+}
+
+/* 레스토랑 예약 컨테이너 스타일 */
+.reservation-container {
+    position: relative;
+}
+
+/* 식사 인원 입력 스타일 */
+.reservation-count {
+    margin-bottom: 24px;
+}
+
+.reservation-count label {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.reservation-count input {
+    font-size: 16px;
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    text-align: right;
+    padding: 0 14px;
+    width: 270px;
+    height: 42px;
+    margin-right: 14px;
+}
+
+.reservation-count input::placeholder {
+    color: #BDBDBD;
+}
+
+.reservation-count button {
+    background-color: #2F80ED;
+    border-radius: 10px;
+    width: 86px;
+    height: 44px;
+    color: #FFF;
+    font-size: 16px;
+}
+
+/* 레스토랑 예약 테이블 스타일 */
+.quests {
+    margin-bottom: 20px;
+}
+
+.quests-title {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+/* 테이블 스타일 */
+.reservation-table {
+    background-color: #f8f8f8;
+    border-top: 1px solid #BDBDBD;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table thead {
+    display: block;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table th {
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table th, .reservation-table td {
+    padding: 3px 0 4px;
+    border-right: 1px solid #bdbdbd;
+}
+
+.reservation-table th:nth-child(2), .reservation-table td:nth-child(2) {
+    background-color: #FFF;
+}
+
+.reservation-table th:nth-child(1), .reservation-table td:nth-child(1) {
+    width: 178px;
+}
+
+.reservation-table th:nth-child(2), .reservation-table td:nth-child(2) {
+    width: 110px;
+}
+
+.reservation-table th:nth-child(3), .reservation-table td:nth-child(3) {
+    width: 108px;
+    border-right: none;
+}
+
+/* 
+tbody에 max-height를 줘서 overflow 경우 스크롤이 생기게 합니다. 
+*/
+.reservation-table tbody {
+    display: block;
+    max-height: 482px;
+    overflow-y: scroll;
+}
+
+.reservation-table tbody tr {
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.reservation-table tbody tr:last-child {
+    border: none;
+}
+
+.reservation-table td {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* 예약 현재 상태 글자 색상 */
+.reject {
+    color: #EB5757;
+}
+
+.waiting {
+    font-size: 16px;
+    color: #2F80ED;
+}
+
+/* 영업 개시 버튼 스타일 */
+.start-btn {
+    position: absolute;
+    background-color: #2F80ED;
+    border-radius: 10px;
+    width: 400px;
+    height: 44px;
+    color: #FFF;
+    font-size: 16px;
+    bottom: 0;
+}

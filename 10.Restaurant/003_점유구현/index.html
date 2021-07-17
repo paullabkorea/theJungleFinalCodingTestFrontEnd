@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/style/style.css">
+  <title>레스토랑 예약</title>
+</head>
+<body>
+    <div id="app">
+        <section class="restaurant-container">
+            <h3 class="sr-only">레스토랑 테이블</h3>
+            <!-- 현재 영업 시간 -->
+            <div class="current-time">
+                <div class="title">현재 영업 시간</div>
+                <div class="time">08:00:00</div>
+            </div>
+            <div class="stage">
+                <img src="./src/images/stage.png" alt="">
+            </div>
+            <!-- 1인 테이블(bar 테이블)  -->
+            <div class="bar-table">
+                <img src="./src/images/bar-table.png" alt="">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <!-- 2인 테이블(사각형) -->
+            <div class="rec-table table-1">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <div class="rec-table table-2">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <div class="rec-table table-3">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <!-- 4인 테이블(원형) -->
+            <div class="circle-table table-1">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <div class="circle-table table-2">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <div class="circle-table table-3">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <div class="circle-table table-4">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+            <div class="circle-table table-5">
+                <div class="chairs">
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                    <div class="chair-item"></div>
+                </div>
+            </div>
+        </section>
+        <section class="reservation-container">
+            <h3 class="sr-only">레스토랑 예약 시스템</h3>
+            <div class="reservation-count">
+                <!-- 식사 인원 입력 form -->
+                <form>
+                    <label for="">식사 인원</label>
+                    <!-- Enter 입력 방지 -->
+                    <input hidden="hidden" />
+                    <input type="number" placeholder="숫자 입력" id="식사인원">
+                    <button type="button" id="예약버튼">예약</button>
+                </form>
+                <p id="경고문구"></p>
+            </div>
+            <!-- restaurant guest -->
+            <div class="quests">
+                <div class="quests-title">Restaurant Guests</div>
+                <!-- 예약 리스트 테이블 -->
+                <table class="reservation-table">
+                    <thead>
+                        <tr>
+                            <th>예약 번호</th>
+                            <th>인원</th>
+                            <th>현재 상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 영업 개시 버튼 -->
+            <button type="button" class="start-btn" id="영업개시">영업 개시</button>
+        </section>
+    </div>
+    <script src="src/function.js"></script>
+</body>
+</html>
