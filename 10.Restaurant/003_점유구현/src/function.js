@@ -209,7 +209,7 @@ function 영업개시클릭() {
                     }
                 }
             }
-            if (guest.식시시간 < 60){
+            if (guest.현재상태 == '식사중' && guest.식시시간 < 60){
                 guest.식시시간 += 1
             } else if (guest.식시시간 >= 60 && guest.현재상태 == '식사중'){
                 guest.현재상태 = '식사완료'
