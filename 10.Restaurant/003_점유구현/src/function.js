@@ -5,9 +5,9 @@ class Restaurant{
     //constructor
     //예약번호, 예약인원, 현재상태(대기중, 식사중, 식사완료, 거절)
     constructor(테이블1인, 테이블2인, 테이블4인){
-        this.테이블1인 = 테이블1인
-        this.테이블2인 = 테이블2인
-        this.테이블4인 = 테이블4인
+        //this.테이블1인 = 테이블1인
+        //this.테이블2인 = 테이블2인
+        //this.테이블4인 = 테이블4인
         this.테이블확인 = [
             {
                 테이블종류 : '테이블1인',
@@ -69,8 +69,6 @@ class Restaurant{
     }
 
     clock() {
-
-        // CodeReview - 2 영업시간 self로 처리하려 했더니 바로 다음 값부터 undefined처리
         var 화면영업시간 = document.getElementsByClassName('time')[0]
 
         화면영업시간.innerText = `${시 < 10 ? `0${시}` : 시}:${분 < 10 ? `0${분}` : 분}:00`
@@ -123,7 +121,6 @@ function 버튼클릭() {
 
 function 테이블생성(){
     //console.log(data)
-    jsonData = data
     let tableBodyData = []
     for (const iterator of data) {
         if (iterator.현재상태 == '대기중'){
@@ -227,8 +224,6 @@ function 영업개시클릭() {
 
         if (시 >= 종료시간){
             clearInterval(timer)
-            // CodeReview - 1
-            //영업개시버튼.removeEventListener('click', 영업개시클릭)
         }
     }, 1000)
 }
@@ -238,7 +233,7 @@ var 시 = 8
 var 종료시간 = 22
 var 분 = 1
 
-data = []
+var data = []
 
 const 식사인원입력 = document.getElementById('예약버튼')
 식사인원입력.addEventListener('click', 버튼클릭)
