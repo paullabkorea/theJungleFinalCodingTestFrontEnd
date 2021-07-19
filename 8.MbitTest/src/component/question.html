@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../style/style.css" />
-    <title>나의 MBIT</title>
-  </head>
-  <body>
-    <form action="/submit" id="question-form" method="post">
-    </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <title>나의 MBIT</title>
+</head>
+
+<body>
+  <form action="/submit" id="question-form" method="post">
+
+    <!-- 예시 마크업 -->
+    <div class="status-box">
+      <span> 1/10 </span>
+      <div class="status-bar">
+      </div>
+    </div>
+    <div class="question-box">
+      <h2>Q. 당신이 가장 재밌었던 수업은?</h2>
+      <ol class="answer-list">
+        <li class="answer-item">
+          <input type="radio" id="answer-1" name="question-1" value="5" />
+          <label for="answer-1">1. 게임 개발(유니티, 언리얼, Pygame)</label>
+        </li>
+      </ol>
+    </div>
+    <div class="button-box">
+      <button type="button" class="previous-btn">이전</button>
+      <button type="button" class="next-btn">다음</button>
+    </div>
+    <!-- 예시 마크업 -->
+
+  </form>
   <script type="text/javascript" src="../js/question.js"></script>
-  </body>
+</body>
+
 </html>

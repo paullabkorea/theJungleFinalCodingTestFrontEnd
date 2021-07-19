@@ -19,12 +19,12 @@ class VendingmachineFunc {
     // 선택한 음료수 목록 생성
     stagedItemGenerator(target) {
         const stagedItem = document.createElement('li');
+        stagedItem.dataset.item = target.dataset.item;
+        stagedItem.dataset.price = target.dataset.price;
         stagedItem.innerHTML = `
-        <button type="button" class="btn-staged" data-item="${target.dataset.item}" data-price="${target.dataset.price}">
             <img src="./src/images/${target.dataset.img}" alt="" class="img-item">
             <strong class="txt-item">${target.dataset.item}</strong>
             <span class="num-counter">1</span>
-        </button>
         `;
         this.stagedList.appendChild(stagedItem);
     }
@@ -32,7 +32,6 @@ class VendingmachineFunc {
     bindEvents() {
         /*
          * 1. 입금 버튼 기능
-         * 입금액이 없는 상태에서 입금 버튼을 누르면 아무일도 일어나지 않습니다.
          * 입금액을 입력하고 입금 버튼을 누르면 소지금은 소지금 - 입금액, 잔액은 잔액 + 입금액이 됩니다.
          * 입금액이 소지금 보다 많다면 실행을 중단하고 "소지금이 부족합니다." 라고 쓰인 경고창을 띄웁니다.
          * 입금액 인풋창은 초기화됩니다.
@@ -57,7 +56,6 @@ class VendingmachineFunc {
 
         /*
         * 2. 거스름돈 반환 버튼 기능
-        * 잔액이 없는 상태에서 반환 버튼을 누르면 아무일도 일어나지 않습니다.
         * 반환 버튼을 누르면 소지금은 소지금 + 잔액이 됩니다.
         * 반환 버튼을 누르면 잔액 창은 초기화됩니다.
         */
@@ -93,7 +91,7 @@ class VendingmachineFunc {
 
                     if (this.stagedList.querySelectorAll('li').length > 0) { // 이미 선택한 음료수가 있을 경우
                         this.stagedList.querySelectorAll('li').forEach((item) => {  // 클릭한 음료수가 내가 이미 선택한 아이템인지 탐색
-                            if (item.querySelector('button').dataset.item === targetElBtn.dataset.item) { //내가 클릭한 상품과 내가 담은 상품이 같을 경우
+                            if (item.dataset.item === targetElBtn.dataset.item) { //내가 클릭한 상품과 내가 담은 상품이 같을 경우
                                 item.querySelector('.num-counter').innerText++;
                                 isStaged = true;
                                 return;
@@ -119,10 +117,9 @@ class VendingmachineFunc {
         });
 
         /**
-         * 5. 획득 버튼 기능
+         * 4. 획득 버튼 기능
          * 획득 버튼을 누르면 선택한 음료수 목록이 획득한 음료 목록으로 이동합니다.
          * 획득한 음료의 금액을 모두 합하여 총금액을 업데이트 합니다.
-         *
         */
         this.btnGet.addEventListener('click', (event) => {
             let isGot = false;
@@ -131,7 +128,7 @@ class VendingmachineFunc {
                 this.gotList.querySelectorAll('li').forEach((itemGot) => {
                     let itemGotCount = itemGot.querySelector('.num-counter');
                     // 획득할 아이템이 이미 획득한 음료 리스트에 존재하는지 확인
-                    if (itemStaged.querySelector('button').dataset.item === itemGot.querySelector('button').dataset.item) {
+                    if (itemStaged.dataset.item === itemGot.dataset.item) {
                         //획득한 음료 리스트의 아이템 갯수 업데이트 
                         itemGotCount.innerText = parseInt(itemGotCount.innerText) + parseInt(itemStaged.querySelector('.num-counter').innerText);
                         this.stagedList.removeChild(itemStaged); // stagedList 에서 삭제
@@ -146,7 +143,7 @@ class VendingmachineFunc {
 
             // 획득한 음료 리스트를 순환하면서 총 금액을 계산합니다.
             this.gotList.querySelectorAll('li').forEach((itemGot) => {
-                totalPrice += itemGot.querySelector('button').dataset.price * parseInt(itemGot.querySelector('.num-counter').innerText);
+                totalPrice += itemGot.dataset.price * parseInt(itemGot.querySelector('.num-counter').innerText);
             });
             this.txtTotal.innerText = `총금액 : ${new Intl.NumberFormat().format(totalPrice)}원`;
         });

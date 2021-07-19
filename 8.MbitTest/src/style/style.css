@@ -32,11 +32,7 @@ a {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-button {
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
+
 
 /* 인트로 페이지 스타일 */
 /* 인트로 컨테이너 스타일 */
@@ -84,6 +80,9 @@ button {
   color: #9b51e0;
   font-weight: 900;
 }
+
+
+
 
 /* 문항 선택 페이지 */
 /* form 스타일 */
@@ -195,6 +194,8 @@ button {
 .loading-container p {
   font-size: 14px;
 }
+
+
 
 /* 결과페이지 스타일 */
 /* 결과 컨테이너 스타일 */
