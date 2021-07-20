@@ -1,26 +1,27 @@
 @import 'reset.css';
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+
+
 body{
     background-color: #6FCF97;
-    width: 100vw;
-    height: 100vh;
+    font-family: Noto Sans KR;
 }
 header{
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 }
 .wrapper{
-    width: 330px;
-    margin: auto;
-
+    width: 320px;
+    margin: 104px auto;
     color: #ffffff;
 }
 .counter{
     width: 100%;
-    margin: 6px 0px;
+    margin: 6px 0px 0px 5px;
     display: flex;
     align-items: flex-end;
 }
 .counter>b{
-    font-family: Noto Sans KR;
+    margin-right: 18px;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -28,7 +29,6 @@ header{
     width: 44px;
 }
 .counter>span{
-    font-family: Noto Sans KR;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -45,7 +45,7 @@ header{
     margin: 5px 5px 0px 5px;
     border-radius: 18px;
     background-color: #20A156;
-
+    cursor: default;
 }
 .peace{
     width: 70px;
@@ -53,8 +53,6 @@ header{
     background-color: #ffffff;
     color: #20A156;
     border-radius: 18px;
-    
-    font-family: Noto Sans KR;
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
@@ -68,17 +66,18 @@ header{
 .void{
     width: 70px;
     height: 70px;
-    
 }
 .button{
-    width: 310px;
-    height: 50px;
+    width: 306px;
+    height: 46px;
     border-radius: 10px;
     font-family: Noto Sans KR;
     font-style: normal;
     font-weight: 900;
     font-size: 16px;
     line-height: 23px;
+    border: 2px solid #FFFFFF;
+    margin: 0 5px;
 
     display: flex;
     align-items: center;
@@ -92,7 +91,6 @@ header{
 .reset_button{
     color: #ffffff;
     margin-top: 14px;
-    border: 2px solid #FFFFFF;
 }
 
 .answer{
@@ -109,7 +107,6 @@ header{
     margin: 10px 0;
     font-size: 16px;
     line-height: 23px;
-    font-family: Noto Sans KR;
     font-style: normal;
     font-weight: 900;
 }

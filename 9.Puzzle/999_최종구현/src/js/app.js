@@ -1,12 +1,12 @@
 const defaultLocation = [];
 const movePeaceArr = [];    // default 위치에서 얼마큼 이동했는지 저장하는 배열
 
-const $peaces = document.querySelectorAll('.peace');
-const $void = document.querySelector('.void');
-const $timer = document.querySelector('.timer');
-const $moveCount = document.querySelector('.move_count');
-const $answer = document.querySelector('.answer');
-const $puzzle = document.querySelector('.puzzle');
+const peaces = document.querySelectorAll('.peace');
+const voidPeace = document.querySelector('.void');
+const timer = document.querySelector('.timer');
+const moveCount = document.querySelector('.move_count');
+const answer = document.querySelector('.answer');
+const puzzle = document.querySelector('.puzzle');
 
 let move = 0;
 let time = 0;
@@ -20,7 +20,7 @@ function convertNum(num) {
 function setTime() {
 	const minutes = Math.floor(time / 60);
 	const seconds = time - minutes * 60;
-	$timer.innerHTML = convertNum(minutes) + ':' + convertNum(seconds);
+	timer.innerHTML = convertNum(minutes) + ':' + convertNum(seconds);
 }
 
 function timeCount(){
@@ -30,7 +30,7 @@ function timeCount(){
 
 function moveConunt() {
     move++;
-    $moveCount.innerHTML = move;
+    moveCount.innerHTML = move;
 }
 
 
@@ -38,7 +38,7 @@ function moveConunt() {
 function initMoveTime() {
     move = 0;
     time = 0;
-    $moveCount.innerHTML = move;
+    moveCount.innerHTML = move;
     if (timeCounter) {
         clearInterval(timeCounter);
         setTime();
@@ -81,12 +81,12 @@ function isVoid(checkVoid) {
 }
 
 function answerView() {
-    document.querySelector('.answer_move').innerHTML = `move : ${$moveCount.innerHTML}`;
-    document.querySelector('.answer_time').innerHTML = `time : ${$timer.innerHTML}`;
+    document.querySelector('.answer_move').innerHTML = `move : ${moveCount.innerHTML}`;
+    document.querySelector('.answer_time').innerHTML = `time : ${timer.innerHTML}`;
     
-    $puzzle.removeEventListener('click', moveEvent);
+    puzzle.removeEventListener('click', moveEvent);
     initMoveTime();
-    $answer.style.display = 'block';
+    answer.style.display = 'block';
 }
 
 // select 퍼즐 기준 상,하,좌,우 탐색
@@ -123,6 +123,8 @@ function moveEvent(e) {
 // 좌표값을 랜덤으로 섞고 바뀐 좌표와 default 좌표에 차이를 입력
 function random() {
     const sample = [5,3,12,4,6,13,1,7,9,14,16,8,11,10,2,15]
+    //완성 테스트용 샘플
+    // const sample = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,15]
     const movedLocation = []
     // sample의 값을 이용하여 해당되는 위치를 매핑한다.
     for (const idx in sample) {
@@ -139,14 +141,14 @@ function random() {
 
 //최초에 init을 하기위한 함수, 
 function setPeace() {
-    $peaces.forEach((el, i) => el.style.transform = `translate(${movePeaceArr[i][0]}px, ${movePeaceArr[i][1]}px)`);
-    $void.style.transform = `translate(${movePeaceArr[movePeaceArr.length - 1][0]}px, ${movePeaceArr[movePeaceArr.length - 1][1]}px)`;
+    peaces.forEach((el, i) => el.style.transform = `translate(${movePeaceArr[i][0]}px, ${movePeaceArr[i][1]}px)`);
+    voidPeace.style.transform = `translate(${movePeaceArr[movePeaceArr.length - 1][0]}px, ${movePeaceArr[movePeaceArr.length - 1][1]}px)`;
 }
 
 function gameStart() {
     initMoveTime();
     random();
-    $puzzle.addEventListener('click', moveEvent);
+    puzzle.addEventListener('click', moveEvent);
     setPeace();
     timeCounter = setInterval(timeCount,1000)
 }
@@ -155,7 +157,7 @@ function resetGame() {
     //움직인 부분을 0으로 초기화
     movePeaceArr.forEach((e, i) => movePeaceArr[i] = [0, 0]);
     setPeace();
-    $puzzle.removeEventListener('click', moveEvent);
+    puzzle.removeEventListener('click', moveEvent);
     initMoveTime();
 }
 
@@ -163,16 +165,16 @@ function resetGame() {
 function init() {
     document.querySelector('.start_button').addEventListener('click', gameStart);
     document.querySelector('.reset_button').addEventListener('click', resetGame);
-    document.querySelector('.answer_button').addEventListener('click', () => $answer.style.display = 'none');
+    document.querySelector('.answer_button').addEventListener('click', () => answer.style.display = 'none');
     //최초 퍼즐조각 및 빈공간 좌표저장
-    $peaces.forEach(el => {
+    peaces.forEach(el => {
         const { x, y } = el.getBoundingClientRect();
         defaultLocation.push([x, y]);
     });
-    const { x, y } = $void.getBoundingClientRect();
+    const { x, y } = voidPeace.getBoundingClientRect();
     defaultLocation.push([x, y]);
     // 퍼즐 이동거리 초기화
-    for (let i = 0; i <= $peaces.length; i++) {
+    for (let i = 0; i <= peaces.length; i++) {
         movePeaceArr[i] = [0, 0];
     }
 }
