@@ -28,7 +28,7 @@ function timeCount(){
     setTime();
 }
 
-function moveConunt() {
+function moveCountDisplay() {
     move++;
     moveCount.innerHTML = move;
 }
@@ -114,7 +114,7 @@ function moveEvent(e) {
         // 클릭한 퍼즐의 좌표를 이용하여 주변에 void가 있는지 확인한다.
         resultFind = findVoid(target,x,y)
         peaceMove(target, ...resultFind);
-        moveConunt();
+        moveCountDisplay();
         answerCheck();
 
     }
@@ -167,6 +167,9 @@ function init() {
     document.querySelector('.reset_button').addEventListener('click', resetGame);
     document.querySelector('.answer_button').addEventListener('click', () => answer.style.display = 'none');
     //최초 퍼즐조각 및 빈공간 좌표저장
+    //[...peaces].forEach( el => {}); 로 사용하면 되긴 합니다.
+    //Array.prototype.forEach (IE 9이상 지원)
+    //Nodelist.prototype.forEach (IE 지원X)
     peaces.forEach(el => {
         const { x, y } = el.getBoundingClientRect();
         defaultLocation.push([x, y]);
