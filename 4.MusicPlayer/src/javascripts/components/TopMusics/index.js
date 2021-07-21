@@ -36,7 +36,7 @@ export default class TopMusics {
                 return;
             }
 
-            // 첫번째 클래스를 가져와서 체크합니다. 이것은 조금 위험할 수 있으니, 주의해서 사용해야합니다. 항상 첫번째 클래스가 이것이라는 보장은 없기 때문입니다. 누군가 수정을 했을 때 바뀔 수도 있고요.
+            // button 태그의 첫번째 인덱스 클래스를 가져와서 체크합니다.(0부터 시작합니다.) 이것은 조금 위험할 수 있으니, 주의해서 사용해야합니다. 항상 첫번째 클래스가 이것이라는 보장은 없기 때문입니다. 누군가 수정을 했을 때 바뀔 수도 있고요.
             const buttonRole = target.classList.item(1);
             switch (buttonRole) {
                 // 아이콘 플레이인 경우에는
@@ -68,12 +68,12 @@ export default class TopMusics {
         // 멈춤인 아이콘을 모두 play 아이콘으로 ui 변경을 해줍니다.
         playingButtons.forEach(element => element.classList.replace('icon-pause', 'icon-play'));
     }
-    
+
     /**
      * 음악 재생을 app.js 에 요청
      */
     requestPlay(target) {
-         // 받아온 엘리먼트의 부모 엘리먼트를 찾습니다. 부모 엘리먼트에 데이터를 저장해두었습니다.
+        // 받아온 엘리먼트의 부모 엘리먼트를 찾습니다. 부모 엘리먼트에 데이터를 저장해두었습니다.
         const controller = target.parentElement;
         // 엘리먼트에서 data- 형태로 된 것은 element.dataset 에서 가져올 수 있습니다. 이중에 index 값 (음악 인덱스) 를 가져옵니다.
         const { index: musicIndex } = controller.dataset;

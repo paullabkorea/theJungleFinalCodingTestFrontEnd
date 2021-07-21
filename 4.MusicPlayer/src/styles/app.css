@@ -1,5 +1,5 @@
-:root {
-	--main-color: #9B51E0
+:root { /* 도큐먼트의 시작 요소 (html) */
+	--main-color: #9B51E0 /* 사용자 지정 css 속성(변수) */
 }
 
 #app {

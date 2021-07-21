@@ -8,19 +8,6 @@
     "emergency:kill": "kill -9 $(lsof -t -i:3000)",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PracticeWareHouse/animal-album.git"
-  },
-  "keywords": [
-    "album"
-  ],
-  "author": "sherlock",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/PracticeWareHouse/animal-album/issues"
-  },
-  "homepage": "https://github.com/PracticeWareHouse/animal-album#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",

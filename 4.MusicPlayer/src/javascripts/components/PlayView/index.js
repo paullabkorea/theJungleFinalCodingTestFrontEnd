@@ -1,6 +1,6 @@
 // 오디오를 담당하는 플레이뷰입니다. 이 앱 전체의 오디오를 담당하고 있습니다. 한군데서 담당하게 해야 음악 충돌, 두번씩 연속 재생 등이 발생하지 않을 것이기 때문입니다.
 export default class PlayView {
-    
+
     constructor() {
         // 여기에서 핸들링할 오디오 객체를 하나 생성해줍니다.
         this.audio = new Audio();
@@ -44,6 +44,8 @@ export default class PlayView {
          */
         let intervaler = 0;
         this.audio.addEventListener('timeupdate', () => {
+
+            // 타임 업데이트를 잠시 멈추고 진행상황을 업데이트합니다.
             intervaler++;
             if (intervaler % 3 !== 0) {
                 return;
@@ -201,7 +203,7 @@ export default class PlayView {
 
         // 이전 플레이리스트 음악 듣기
         backward.addEventListener('click', () => this.emit('backward'));
-        
+
         // 이후 플레이리스트 음악 듣기
         forward.addEventListener('click', () => this.emit('forward'));
 

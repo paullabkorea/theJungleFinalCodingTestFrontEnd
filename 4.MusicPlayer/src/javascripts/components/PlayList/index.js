@@ -29,6 +29,7 @@ export default class PlayList {
             if (!isControllerButton) {
                 return this.playMusicItem(target);
             }
+            console.log('..');
             // - 버튼 경우에는 플레이 리스트에 있는 음악 제거
             this.removeMusicItem(target);
         })
@@ -39,7 +40,7 @@ export default class PlayList {
         // 가지고 있는 플레이 리스트에서 현재 실행중인 음악을 찾음 
         let currentIndex = this.musicList.findIndex(music => music.playing);
         // 마지막 리스트에 있는 것인지 확인
-        const isMusicIndexEnd = currentIndex >= this.musicList.length - 1; 
+        const isMusicIndexEnd = currentIndex >= this.musicList.length - 1;
         if (isMusicIndexEnd) {
             // 마지막 리스트에 있는 음악이면 초기화 (나중에 +1을 더할 것이기 때문에 -1로 설정)
             currentIndex = -1;
@@ -106,7 +107,7 @@ export default class PlayList {
             // 부모 컴포넌트에 멈추라는 요청을 합니다. app.js 는 이것을 받아서 다시 플레이뷰에 멈춤 요청을 합니다.
             this.emit('pause');
         }
-       
+
     }
 
     // 플레이 리스트에서 음악 제거
@@ -161,7 +162,7 @@ export default class PlayList {
     saveStorage() {
         // 가진 음악 리스트 중에 상태를 표현하는 playing 때문에 필요한 값만 가져와서 새로운 복사본을 만듭니다.
         const musicList = this.musicList.map(
-            ({artists, cover, source, title}) => ({artists, cover, source, title})
+            ({ artists, cover, source, title }) => ({ artists, cover, source, title })
         );
         try {
             // JSON.stringify 를 통해 문자열로 저장해줍니다.

@@ -20,7 +20,7 @@ export default class TabButtons {
             { title: 'Search', iconName: 'icon-search' },
         ];
 
-        tabsContainer.innerHTML = tabs.map(tab => {
+        tabsContainer.innerHTML = tabs.map(tab => { // map : 배열의 각 요소에 주어진 함수를 적용하고 새로운 배열을 리턴
             return `
                 <li>
                     <button class="button-app-controller">
@@ -29,7 +29,7 @@ export default class TabButtons {
                     </button>
                 </li>
             `;
-        }).join('');
+        }).join(''); //배열의 요소를 연결해 하나의 문자열로 반환
 
         return tabsContainer;
     }
@@ -47,7 +47,7 @@ export default class TabButtons {
     }
 
     // 공통 이벤트입니다. 만약 시험에서 사용하시게 된다면 각 Component에 따로 두는 것보다 공통 베이스 컴포넌트를 만들어서 상속받는 형태로 하시는 것이 좋습니다. (5)번에 샘플이 있습니다.
-     on(eventName, callback) {
+    on(eventName, callback) {
         this.events = this.events ? this.events : {};
         this.events[eventName] = callback;
     }

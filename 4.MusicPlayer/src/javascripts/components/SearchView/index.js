@@ -28,7 +28,7 @@ export default class SearchView {
 
         return rootElement;
     }
-    
+
     // 이벤트 바인딩
     bindEvents() {
 
@@ -109,7 +109,7 @@ export default class SearchView {
     requestAddPlayList(target) {
         // 음악 요청과 마찬가지로 받아온 엘리먼트의 부모 엘리먼트를 찾습니다. 부모엘리먼트에 데이터를 저장해두었습니다.
         const controller = target.parentElement;
-         // 엘리먼트에서 data- 형태로 된 것은 element.dataset 에서 가져올 수 있습니다. 이중에 index 값 (음악 인덱스) 를 가져옵니다.
+        // 엘리먼트에서 data- 형태로 된 것은 element.dataset 에서 가져올 수 있습니다. 이중에 index 값 (음악 인덱스) 를 가져옵니다.
         const { index: musicIndex } = controller.dataset;
         // 한덩어리인 페이로드로 묶습니다. 음악리스트를 따로 보내지 않아도 될 것 같긴 한데.. 최초에 이런 식으로 만들어서 그냥 계속 보내게 되었습니다.
         const payload = { musics: this.searchedMusics, musicIndex };
