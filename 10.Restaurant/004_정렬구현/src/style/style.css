@@ -42,7 +42,7 @@ button {
     background-color: #F2F2F2;
     border-radius: 10px;
     border: 2px solid #BDBDBD;
-    overflow: hidden;
+    overflow: hidden; /* 필요 없어 보입니다. */
 }
 
 /* 현재 영업 시간 */

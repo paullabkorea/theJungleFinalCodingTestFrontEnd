@@ -11,25 +11,25 @@ header{
 }
 .wrapper{
     width: 320px;
-    margin: 104px auto;
+    margin: 104px auto; /* 104px auto 0 */
     color: #ffffff;
 }
 .counter{
-    width: 100%;
+    width: 100%; /* 필요 없습니다 */
     margin: 6px 0px 0px 5px;
-    display: flex;
-    align-items: flex-end;
+    display: flex; /* 필요 없습니다 */
+    align-items: flex-end; /* 필요 없습니다 */
 }
 .counter>b{
     margin-right: 18px;
-    font-style: normal;
+    font-style: normal; /* 필요없습니다. */
     font-weight: bold;
     font-size: 14px;
     line-height: 20px;
     width: 44px;
 }
 .counter>span{
-    font-style: normal;
+    font-style: normal; /* 필요없습니다. */
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
@@ -48,15 +48,15 @@ header{
     cursor: default;
 }
 .peace{
-    width: 70px;
+    width: 70px; /* 필요없습니다. */
     height: 70px;
     background-color: #ffffff;
     color: #20A156;
     border-radius: 18px;
-    font-style: normal;
+    font-style: normal; /* 필요없습니다. */
     font-weight: 900;
     font-size: 30px;
-    line-height: 43px;
+    line-height: 43px; /* 필요없습니다. */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,16 +72,16 @@ header{
     height: 46px;
     border-radius: 10px;
     font-family: Noto Sans KR;
-    font-style: normal;
+    font-style: normal; /* 필요없습니다. */
     font-weight: 900;
     font-size: 16px;
-    line-height: 23px;
+    line-height: 23px;/* 필요없습니다. */
     border: 2px solid #FFFFFF;
     margin: 0 5px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;/* 필요없습니다. */
+    align-items: center;/* 필요없습니다. */
+    justify-content: center;/* 필요없습니다. */
 }
 .start_button{
     margin-top: 50px;
@@ -107,11 +107,11 @@ header{
     margin: 10px 0;
     font-size: 16px;
     line-height: 23px;
-    font-style: normal;
+    font-style: normal; /* 필요없습니다. */
     font-weight: 900;
 }
 
 .answer_button {
     margin-top: 10px;
-    cursor: pointer;
+    cursor: pointer; /* 필요없습니다. */
 }
