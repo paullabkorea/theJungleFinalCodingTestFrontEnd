@@ -46,6 +46,8 @@ img {
 }
 
 .top5-list {
+	overflow-y: scroll;
+	box-sizing: border-box;
 	height: 65%;
 	padding: 18px 0;
 }
@@ -160,7 +162,10 @@ img {
 	line-height: 21px;
 	background-color: var(--main-color);
 }
-
+.music-list{
+    overflow-y: scroll;
+    height:calc(100vh - 134px);
+}
 .music-list li {
 	padding: 18px 0;
 	margin: 0 23px;

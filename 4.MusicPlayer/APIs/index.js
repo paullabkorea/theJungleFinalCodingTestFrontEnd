@@ -22,7 +22,7 @@ app.get("/", (request, response) => { // 루트 경로. src/index.html 초기 �
   response.sendFile(path.join(__dirname, "../src/index.html"));
 });
 
-const PORT = 8080;
+const PORT = 3000;
 app.listen(PORT, () => { // 서버를 실행할 때 3000번 포트를 엽니다.
   console.log(`Server listening at http://localhost:${PORT}`);
 });

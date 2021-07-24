@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="../src/styles/reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <ul class="app-controller">
+            <li>
+                <button class="button-app-controller">
+                    <i class="tab-icon icon-top5"></i>
+                    Top5
+                </button>
+            </li>
+
+            <li>
+                <button class="button-app-controller">
+                    <i class="tab-icon icon-playlist"></i>
+                    Playlist
+                </button>
+            </li>
+
+            <li>
+                <button class="button-app-controller">
+                    <i class="tab-icon icon-search"></i>
+                    Search
+                </button>
+            </li>
+        </ul>
+        <article class="contents-search">
+            <div class="search-controller">
+                <input class="search-input" type="text" placeholder="검색">
+                <button class="search-button">
+                    <i class="icon-search-controller"></i>
+                </button>
+            </div>
+            <ul class="music-list">
+                <li>
+                    <div class="music-content">
+                        <div class="music-data">
+                            <div class="music-cover">
+                                <img src="../APIs/public/images/cover/where_we_wanna_go.png">
+                            </div>
+                            <div class="music-info">
+                                <strong class="music-title">Where We Wanna Go</strong>
+                                <em class="music-artist">Patrick Patrikios</em>
+                            </div>
+                        </div>
+                        <div class="music-simple-controller" data-index="0">
+                            <button class="icon icon-play">
+                                <span class="invisible-text">재생</span>
+                            </button>
+                            <button class="icon icon-plus">
+                                <span class="invisible-text">추가</span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="music-content">
+                        <div class="music-data">
+                            <div class="music-cover">
+                                <img src="../APIs/public/images/cover/all_the_fixings.png">
+                            </div>
+                            <div class="music-info">
+                                <strong class="music-title">All the Fixings</strong>
+                                <em class="music-artist">Zachariah Hickman</em>
+                            </div>
+                        </div>
+                        <div class="music-simple-controller" data-index="1">
+                            <button class="icon icon-play">
+                                <span class="invisible-text">재생</span>
+                            </button>
+                            <button class="icon icon-plus">
+                                <span class="invisible-text">추가</span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </div>
+    <script type="module" src="./javascripts/index.js"></script>
+
+</body>
+
+</html>

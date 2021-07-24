@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="../src/styles/reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <ul class="app-controller">
+            <li>
+                <button class="button-app-controller">
+                    <i class="tab-icon icon-top5"></i>
+                    Top5
+                </button>
+            </li>
+            <li>
+                <button class="button-app-controller">
+                    <i class="tab-icon icon-playlist"></i>
+                    Playlist
+                </button>
+            </li>
+            <li>
+                <button class="button-app-controller">
+                    <i class="tab-icon icon-search"></i>
+                    Search
+                </button>
+            </li>
+        </ul>
+        <article class="contents-top5">
+            <div class="top5-roof">
+                <img src="../src/assets/images/Logo.png">
+            </div>
+            <ol class="top5-list">
+                <li>
+                    <div class="music-rank">1</div>
+                    <div class="music-content">
+                        <div class="music-data">
+                            <div class="music-cover">
+                                <img src="../APIs/public/images/cover/19th_floor.png">
+                            </div>
+                            <div class="music-info">
+                                <strong class="music-title">19th Floor</strong>
+                                <em class="music-artist">Bobby Richards</em>
+                            </div>
+                        </div>
+                        <div class="music-simple-controller" data-index="0">
+                            <button class="icon icon-play">
+                                <span class="invisible-text">재생</span>
+                            </button>
+                            <button class="icon icon-plus">
+                                <span class="invisible-text">추가</span>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </article>
+    </div>
+    <!-- <div class="intro" style="opacity: 0;">
+        <img src="../src/assets/images/Logo.png">
+    </div> -->
+</body>
+
+</html>

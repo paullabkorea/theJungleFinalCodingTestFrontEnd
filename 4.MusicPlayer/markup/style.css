@@ -1,0 +1,410 @@
+/* 공통 스타일 */
+:root{ /* 문서 트리의 루트 요소 */
+    --main-color: #9B51E0; /* 사용자 지정 속성 (css 변수) */
+    /* 문서의 루트 요소에 변수를 선언하여 그 자식 요소들이 상속받아 사용할 수 있게합니다. 
+    루트요소에 선언한것은 마치 전역 변수를 만든것과 같습니다. */
+}
+#app{
+    height:calc(100vh - 80px); /* 사칙연산을 수행할수 있게 도와주는 css 함수. IE9 이상부터 가능 */
+    width:100%;
+}
+img{
+    width:100%;
+}
+.invisible-text{
+    position:fixed;
+    top:-100px;
+}
+.hide{
+    display: none;
+}
+
+
+/* 인트로 화면 스타일 */
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color: var(--main-color) ;
+    z-index: 9000;
+    transition: all ease-out 1s;
+}
+
+.intro img{
+    width:134px;
+    height:63px;
+}
+
+/* Top5 */
+
+.contents-top5{
+    height:100%;
+}
+.top5-roof{
+    position:relative;
+    height:35%;
+    background-color: rgba(155, 82, 224, 0.8);
+}
+.top5-roof img{
+    margin:24px;
+    width:108px;
+}
+.top5-list {
+    height:65%;
+    padding:18px 0;
+    /* 추가 스타일 */
+    overflow-y: auto;
+    box-sizing: border-box;
+    /**********/
+}
+.top5-list li{
+    display: flex;
+}
+.top5-list li + li{
+    margin-top:10px;
+}
+.music-rank{
+    display: flex;
+    width:48px;
+    justify-content: center;
+    align-items: center;
+    font-size:14px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.music-content{
+    display: flex;
+    flex-grow:1; /* flex-item이 flex-container 요소 내부에서 할당 가능한 공간의 정도 */
+    justify-content: space-between;
+    padding-right: 20px;
+}
+
+.music-cover{
+    width:50px;
+    height:50px;
+    margin-right: 16px;
+    border-radius: 5px;
+}
+.music-cover img{
+    border-radius: 5px;
+}
+.music-data{
+    display: flex;
+}
+.music-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.music-info .music-title{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.music-info .music-artist{
+    font-size: 12px;
+    line-height: 18px;
+    color:#828282;
+}
+.music-simple-controller{
+    display: flex;
+    align-items: center;;
+}
+
+/* 글로벌 네비게이션 버튼 */
+.app-controller{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 그리드 열의 크기를 제어. fr(fraction) : 비율을 나타내는 단위 */
+    position:fixed;
+    width:100%;
+    height:80px;
+    bottom:0;
+    background-color: #f2f2f2;
+}
+.app-controller li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+}
+
+.app-controller li.on{
+    color:var(--main-color);
+}
+.button-app-controller{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height:100%;
+}
+
+
+/* 플레이 리스트 스타일 */
+.contents-playlist .playlist-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:54px;
+    color:#fff;
+    font-weight: bold;
+    line-height: 21px;
+    background-color: var(--main-color);
+}
+/* 추가 스타일 */
+.music-list{
+    overflow-y: scroll;
+    height:calc(100vh - 134px);
+}
+.contents-search .music-list{
+    overflow-y: scroll;
+    height:calc(100vh - 162px);
+}
+/* ******** */
+.music-list li{
+    padding:18px 0;
+    margin:0 23px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.music-list li.on .music-title{
+    color:var(--main-color);
+}
+
+
+/* 서치 화면 스타일 */
+.search-controller{
+    position:relative;
+    padding:23px;
+}
+.search-input{
+    width:calc(100% - 36px); /* 36px --> 72px */
+    width:-webkit-fill-available; /* 부모의 내부 공간을 가득 채우도록 지정합니다. */
+    /* width 값을 두개 사용한 이유는 만약 -webkit-fill-available; 속성이 적용이 되지 않는다면 calc(100% - 36px) 값이 적용되도록 하기 위함입니다. */
+    border:none;
+    border-radius: 35px;
+    background-color: #f2f2f2;
+    height:36px;
+    padding:0 48px 0 24px
+}
+.search-button{
+    position:absolute;
+    top:30px;
+    right:40px;
+}
+.icon-search-controller{
+    display: block;
+    width:20px;
+    height:20px;
+    background-image: url(../src/assets/icons/tiny_search.png);
+    background-size: 20px;
+}
+
+
+/* 플레이 화면 스타일 */
+.play-view{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: #fff;
+    z-index: 5000;
+}
+.play-view .play-view-container{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:60px 34px 16px;
+    overflow: scroll;
+}
+
+.play-view .back-button{
+    position:absolute;
+    top:24px;
+    left:24px;
+}
+.play-view .back-button .icon-controller-back{
+    display: block;
+    width:24px;
+    height:24px;
+    background-image: url(../src/assets/icons/arrow-left.png);
+    background-size: 24px;
+}
+.play-view .cover-wrapper{
+    margin:34px auto 26px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.play-view .cover-wrapper img{
+    height:100%;
+    object-fit: cover; /* img 나 video 같은 요소의 크기를 조절하는 방식을 설정. cover : 콘텐츠의 가로세로 비율을 유지하면서 컨텐츠 영역을 가득 채웁니다. background-size:cover의 기능과 같다고 생각하면 됩니다. */
+}
+
+.play-view .music-title{
+    font-weight: bold;
+    margin-bottom:4px;
+    font-size: 14px;
+}
+
+.play-view .music-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.play-view .music-artist-name{
+    font-size: 12px;
+    color:#828282;
+}
+.play-view .play-view-controller{
+    margin-top:60px;
+}
+.play-view .play-view-controller .controller-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-view .icon-controller-repeat{
+    display: block;
+    width:20px;
+    height:20px;
+    background-image: url(../src/assets/icons/repeat.png);
+    background-size: 20px;
+}
+.play-view .on .icon-controller-repeat{
+    background-image: url(../src/assets/icons/repeat_on.png);
+}
+.play-view .icon-controller-backward{
+    display: block;
+    width:24px;
+    height:24px;
+    background-image: url(../src/assets/icons/backward.png);
+    background-size: 24px;
+}
+.play-view .icon-controller-play{
+    display: block;
+    width:40px;
+    height:40px;
+    background-image: url(../src/assets/icons/play.png);
+    background-size: 40px;
+}
+.play-view .icon-controller-pause{
+    display: block;
+    width:40px;
+    height:40px;
+    background-image: url(../src/assets/icons/pause.png);
+    background-size: 40px;
+}
+.play-view .icon-controller-forward{
+    display: block;
+    width:24px;
+    height:24px;
+    background-image: url(../src/assets/icons/forward.png);
+    background-size: 24px;
+}
+.play-view .icon-controller-rotate{
+    display: block;
+    width:20px;
+    height:20px;
+    background-image: url(../src/assets/icons/rotate-ccw.png);
+    background-size: 20px;
+}
+.play-view .on .icon-controller-rotate{
+    background-image: url(../src/assets/icons/rotate-ccw_on.png);
+}
+
+/* 플레이뷰 컨트롤러 스타일 */
+.progress-container{
+    margin-top: 20px;
+}
+.progress{
+    width:100%;
+}
+.progress-bar{
+    position:relative;
+    height:100%;
+    background-color: var(--main-color);
+    border-radius: 4px;
+}
+.progress-control-circle{
+    position:absolute;
+    right:-4px;
+    top:-4px;
+    width:12px;
+    height:12px;
+    border-radius: 100%;
+    background-color: var(--main-color);
+}
+.progress-time{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    font-size: 10px;
+}
+.current-time{
+    color:var(--main-color);
+}
+.end-time{
+    color:#BDBDBD;
+}
+
+/* icon 스타일 모음 */
+.tab-icon{
+    display: block;
+    width:26px;
+    height:26px;
+    margin-bottom: 6px;
+    background-size: 26px;
+    background-repeat: no-repeat;
+}
+.icon{
+    display: block;
+    width:20px;
+    height:20px;
+    margin-bottom: 6px;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+.icon+.icon{
+    margin-left:8px;
+}
+.icon-play{
+    background-image: url(../src/assets/icons/tiny_play.png);
+}
+.icon-pause{
+    background-image: url(../src/assets/icons/pause.png);
+}
+.icon-plus{
+    background-image: url(../src/assets/icons/plus.png);
+}
+.icon-minus{
+    background-image: url(../src/assets/icons/minus.png);
+}
+.icon-top5{
+    background-image: url(../src/assets/icons/music.png);
+}
+.on .icon-top5{
+    background-image: url(../src/assets/icons/music_on.png);
+}
+.icon-playlist{
+    background-image: url(../src/assets/icons/layers.png);
+}
+.on .icon-playlist{
+    background-image: url(../src/assets/icons/layers_on.png);
+}
+.icon-search{
+    background-image: url(../src/assets/icons/search.png);
+}
+.on .icon-search{
+    background-image: url(../src/assets/icons/search_on.png);
+}

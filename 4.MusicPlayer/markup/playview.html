@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="../src/styles/reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <article class="play-view">
+        <div class="play-view-container">
+            <h2 class="invisible-text">Play View</h2>
+            <button class="back-button">
+                <i class="icon-controller-back"></i>
+            </button>
+            <div class="cover-wrapper">
+                <img src="http://localhost:3000/public/images/cover/19th_floor.png">
+            </div>
+            <div class="music-information">
+                <h3 class="music-title">19th Floor</h3>
+                <span class="music-artist-name">Bobby Richards</span>
+            </div>
+            <div class="play-view-controller">
+                <div class="controller-container">
+                    <button class="control-button control-repeat ">
+                        <i class="icon-controller-repeat"></i>
+                    </button>
+                    <button class="control-button control-backward">
+                        <i class="icon-controller-backward"></i>
+                    </button>
+                    <button class="control-button control-play">
+                        <i class="icon-controller-play"></i>
+                    </button>
+                    <button class="control-button control-pause hide">
+                        <i class="icon-controller-pause"></i>
+                    </button>
+                    <button class="control-button control-forward">
+                        <i class="icon-controller-forward"></i>
+                    </button>
+                    <button class="control-button control-rotate">
+                        <i class="icon-controller-rotate"></i>
+                    </button>
+                </div>
+                <div class="progress-container">
+                    <input class="progress" type="range" min="0" max="1000" value="0">
+                    <div class="progress-time">
+                        <div class="current-time">1:43</div>
+                        <div class="end-time">3:16</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</body>
+
+</html>
