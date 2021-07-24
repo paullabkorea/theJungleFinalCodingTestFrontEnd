@@ -1,0 +1,130 @@
+/* 공통스타일 */
+#app {
+    margin: 0 auto;
+    border: 2px solid #BDBDBD;
+    border-radius: 15px;
+    width: 1130px;
+    height: 656px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 컨텐츠가 가로세로 비율을 유지하면서 가장 큰 크기로 컨텐츠 박스 내부로 들어가도록 크기를 조절합니다. 컨텐츠가 잘려나가는 일이 없습니다. img 요소에 사용하는 backgroud-size:contain 이라고 생각하시면 쉽습니다. */
+  }
+  
+  /* 경로 스타일 */
+  .breadcrumb-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 25px;
+    min-height: 52px; /* 경로에 아무것도 없어도 최소한의 높이를 유지합니다. */
+    border-bottom: 1px solid #999;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+  
+  .breadcrumb-container .button-back {
+    background: none;
+    border: none;
+    width: 24px;
+    height: 24px;
+    background-image: url(../src/assets/images/icon_arrow-left.png);
+    background-size: 24px;
+  }
+  
+  .breadcrumbs span {
+    font-weight: bold;
+  }
+  
+  .breadcrumbs span + span:before {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 16px;
+    background-image: url(../src/assets/images/icon_arrow.png);
+    background-size: 10px;
+    margin: 0 8px;
+  }
+  
+
+  /* 파일 탐색기 스타일 */
+  .finder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 네개의 컬럼에 각각 같은 비율의 영역을 줍니다. */
+    grid-column-gap: 14px; /* 컬럼과 컬럼 사이의 거리입니다. */
+    grid-row-gap: 32px; /* 행과 행 사이의 거리입니다. */
+    list-style: none;
+    margin: 0;
+    padding: 34px 44px;
+  }
+  
+  .finder li {
+    overflow: hidden;
+    border: 2px solid #BDBDBD;
+    border-radius: 10px;
+  }
+  
+  .finder .node {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 20px;
+  }
+  
+  .node img {
+    width: 24px;
+    height: 24px;
+    margin-right: 13px;
+  }
+  
+  .node strong {
+    font-weight: normal;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 높이값만 추가하면 추후에 말줄임 줄 수를 컨트롤 할 수 있도록 남김 */
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; 
+  }
+  
+  .file-image {
+    height: 197px;
+  }
+  
+  .file-image img {
+    object-fit: cover;
+  }
+  
+  .file-image + .node {
+    border-top: 2px solid #BDBDBD;
+  }
+  
+  
+  /* 이미지뷰어 & 로딩 공통 스타일 */
+  .modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal .content {
+    width: 50%;
+    height: 50%;
+  }
+  
+  .loading {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  .image-viewer {
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Drive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <section class="breadcrumb-container">
+            <div class="breadcrumbs"><span>ROOT</span><span>폴더_1</span></div><button class="button-back"></button>
+        </section>
+        <ul class="finder">
+            <li data-id="5" data-type="DIRECTORY">
+                <div class="node">
+                    <img src="../src/assets/images/icon_folder.png">
+                    <strong>폴더_5</strong>
+                </div>
+            </li>
+            <li data-id="6" data-type="DIRECTORY">
+                <div class="node">
+                    <img src="../src/assets/images/icon_folder.png">
+                    <strong>폴더_6</strong>
+                </div>
+            </li>
+            <li data-id="7" data-type="DIRECTORY">
+                <div class="node">
+                    <img src="../src/assets/images/icon_folder.png">
+                    <strong>폴더_7</strong>
+                </div>
+            </li>
+            <li data-id="8" data-type="DIRECTORY">
+                <div class="node">
+                    <img src="../src/assets/images/icon_folder.png">
+                    <strong>폴더_8</strong>
+                </div>
+            </li>
+            <li data-id="21" data-type="FILE">
+                <div class="file-image">
+                    <img src="../APIs/public/images/image_1.png">
+                </div>
+                <div class="node">
+                    <img src="../src/assets/images/icon_image.png">
+                    <strong>이미지_1.png</strong>
+                </div>
+            </li>
+            <li data-id="22" data-type="FILE">
+                <div class="file-image">
+                    <img src="../APIs/public/images/image_2.png">
+                </div>
+                <div class="node">
+                    <img src="../src/assets/images/icon_image.png">
+                    <strong>이미지_2.png</strong>
+                </div>
+            </li>
+        </ul>
+        <section class="modal image-viewer" style="display: none;">
+            <div class="content"><img src="../APIs/public/images/image_1.png"></div>
+        </section>
+    </div>
+
+</body>
+
+</html>
