@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퍼즐 게임</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="counter">
+                <b>Moves</b> <span class="move_count">0</span>
+            </div>
+            <div class="counter">
+                <b>Times</b> <span class="timer">00:00</span>
+            </div>
+        </header>
+        <div class="puzzle">
+            <div class="peace_container">
+                <div id="1" class="peace">1</div>
+            </div>
+            <div class="peace_container">
+                <div id="2" class="peace">2</div>
+            </div>
+            <div class="peace_container">
+                <div id="3" class="peace">3</div>
+            </div>
+            <div class="peace_container">
+                <div id="4" class="peace">4</div>
+            </div>
+            <div class="peace_container">
+                <div id="5" class="peace">5</div>
+            </div>
+            <div class="peace_container">
+                <div id="6" class="peace">6</div>
+            </div>
+            <div class="peace_container">
+                <div id="7" class="peace">7</div>
+            </div>
+            <div class="peace_container">
+                <div id="8" class="peace">8</div>
+            </div>
+            <div class="peace_container">
+                <div id="9" class="peace">9</div>
+            </div>
+            <div class="peace_container">
+                <div id="10" class="peace">10</div>
+            </div>
+            <div class="peace_container">
+                <div id="11" class="peace">11</div>
+            </div>
+            <div class="peace_container">
+                <div id="12" class="peace">12</div>
+            </div>
+            <div class="peace_container">
+                <div id="13" class="peace">13</div>
+            </div>
+            <div class="peace_container">
+                <div id="14" class="peace">14</div>
+            </div>
+            <div class="peace_container">
+                <div id="15" class="peace">15</div>
+            </div>
+            <div class="peace_container">
+                <div id="16" class="void"></div>
+            </div>
+        </div>
+        <button class="button start_button">GAME START</button>
+        <button class="button reset_button">RESET</button>
+        <!-- 모달창 -->
+        <div class="answer">
+            <div class="answer_con">
+                <div class="answer_move">move : 0</div>
+                <div class="answer_time">time : 00:00</div>
+                <div class="answer_button">확인</div>
+            </div>
+        </div>
+    </div>
+    <script src="./src/js/app.js"></script>
+</body>
+</html>
