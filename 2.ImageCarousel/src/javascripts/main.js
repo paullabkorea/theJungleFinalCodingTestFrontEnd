@@ -48,6 +48,7 @@
             carouselUl.appendChild(currentItem);
             currentItem.classList.remove('now');
             next.classList.add('now');
+
         }
         changeTransform();
     }

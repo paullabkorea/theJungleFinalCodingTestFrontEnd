@@ -119,6 +119,10 @@
     filter: brightness(100%);
 }
 
+.last {
+    transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
+}
+
 .prev-btn, .next-btn {
     position: absolute;
     width: 140px;

@@ -65,6 +65,7 @@ function initMoveTime() {
 function answerCheck() {
     let isAnswer = true;
     for (let i = 0; i < movePeaceArr.length; i++) {
+        console.log(movePeaceArr[i][0], movePeaceArr[i][1]);
         if (movePeaceArr[i][0] !== 0 || movePeaceArr[i][1] !== 0) {
             isAnswer = false;
             break;
@@ -138,9 +139,9 @@ function moveEvent(e) {
 
 // 좌표값을 랜덤으로 섞고 바뀐 좌표와 default 좌표에 차이를 입력
 function random() {
-    const sample = [5, 3, 12, 4, 6, 13, 1, 7, 9, 14, 16, 8, 11, 10, 2, 15]
+    // const sample = [5, 3, 12, 4, 6, 13, 1, 7, 9, 14, 16, 8, 11, 10, 2, 15]
     //완성 테스트용 샘플
-    // const sample = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,15]
+    const sample = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 16, 13, 14, 15, 12]
     const movedLocation = []
     // sample의 값을 이용하여 해당되는 위치를 매핑한다.
     for (const idx in sample) {
@@ -152,6 +153,8 @@ function random() {
             movedLocation[i][0] - defaultLocation[i][0],
             movedLocation[i][1] - defaultLocation[i][1]
         ];
+        console.log("movedLocation[i][0] : ", movedLocation[i][0], ", movedLocation[i][1] : ", movedLocation[i][1])
+        console.log("movePeaceArr : ", movePeaceArr[i]);
     }
 }
 
@@ -188,14 +191,17 @@ function init() {
     //Nodelist.prototype.forEach (IE 지원X)
     peaces.forEach(el => {
         const { x, y } = el.getBoundingClientRect();
+        console.log("x : " + x, ", y : " + y);
         defaultLocation.push([x, y]);
     });
     const { x, y } = voidPeace.getBoundingClientRect();
     defaultLocation.push([x, y]);
+    // console.log("x : " + x, ", y : " + y);
     // 퍼즐 이동거리 초기화
     for (let i = 0; i <= peaces.length; i++) {
         movePeaceArr[i] = [0, 0];
     }
+    console.log(defaultLocation);
 }
 
 init();
